@@ -5,3 +5,13 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
   color: #000;                 /* black text on hover */
   background-color: var(--bs-warning);
 }
+
+.btn-outline-warning.active,
+.btn-outline-warning:active {
+  background-color: var(--bs-warning);
+  color: #000;
+}
+.btn-outline-light.active,
+.btn-outline-info.active {
+  /* outline variants keep their default backgrounds when active */
+}
