@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 <h1 class="mb-3">Public datasets {% if filter_label %}<small class="text-info">({{ filter_label }})</small>{% endif %}</h1>
-<div class="d-flex flex-wrap gap-2 mb-4">
-  <!-- modality filter pills -->
+<!-- Row 1: modalities -->
+<div class="d-flex flex-wrap gap-2 mb-3">
   {% for m in modalities %}
   <a href="/modality/{{ m|lower }}" class="btn btn-sm btn-outline-light">{{ m }}</a>
   {% endfor %}
-  <!-- task filter pills -->
+</div>
+<!-- Row 2: tasks -->
+<div class="d-flex flex-wrap gap-2 mb-4">
   {% for t in tasks %}
   <a href="/task/{{ t }}" class="btn btn-sm btn-outline-info">{{ t.replace('_',' ') }}</a>
   {% endfor %}

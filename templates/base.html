@@ -24,11 +24,6 @@
     </nav>
 
     <main class="container pb-5">
-      {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        <div class="alert alert-success" role="alert">{{ messages[0] }}</div>
-      {% endif %}
-      {% endwith %}
       {% block content %}{% endblock %}
     </main>
 

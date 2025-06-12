@@ -1,4 +1,3 @@
-# === data/datasets.yaml ===
 - name: Fuglsang AAD
   link: https://zenodo.org/record/1199011
   subjects: 18
@@ -6,7 +5,7 @@
   minutes: 20
   stimulus_type: audio
   tasks: [attention_decoding]
-  extras: "Room acoustics, attended‑speaker labels"
+  extras: "Room acoustics, attended-speaker labels"
 - name: KU Leuven AAD v2
   link: https://zenodo.org/record/4004271
   subjects: 16
@@ -14,8 +13,8 @@
   minutes: 72
   stimulus_type: audio
   tasks: [attention_decoding, audiovisual_aad]
-  extras: "Ear‑of‑attention, gaze condition"
-- name: MEG‑MASC
+  extras: "Ear-of-attention, gaze condition"
+- name: MEG-MASC
   link: https://osf.io/ag3kj/
   subjects: 27
   signals: MEG
@@ -31,7 +30,7 @@
   stimulus_type: audio
   tasks: [speech_recognition, phoneme_classification]
   extras: "Train/val/test splits, loaders"
-- name: Ershaid CT‑Noise
+- name: Ershaid CT-Noise
   link: https://osf.io/asn2k/
   subjects: 49
   signals: EEG + pupil
@@ -39,8 +38,8 @@
   stimulus_type: audio
   tasks: [listening_effort_decoding]
   extras: "SNR levels, literacy, effort ratings"
-- name: ERP CORE – N400
-  link: https://digitalcommons.unomaha.edu/psychfacpub/283/  # DOI 10.18115/D5JW4R
+- name: ERP CORE – N400
+  link: https://digitalcommons.unomaha.edu/psychfacpub/283/
   subjects: 40
   signals: EEG
   minutes: 25
@@ -62,4 +61,116 @@
   minutes: 12
   stimulus_type: audio
   tasks: [story_comprehension, theory_of_mind]
-  extras: "Word‑level surprisal, ToM & emotion labels"
+  extras: "Word-level surprisal, ToM & emotion labels"
+- name: Biesmans 2017
+  link: https://zenodo.org/record/3997352
+  subjects: 16
+  signals: EEG
+  minutes: 72
+  stimulus_type: audio
+  tasks: [attention_decoding]
+  extras: "Dutch short stories"
+- name: Fuglsang 2020
+  link: https://zenodo.org/record/3618205
+  subjects: 44
+  signals: EEG
+  minutes: 26.7
+  stimulus_type: audio
+  tasks: [attention_decoding]
+  extras: "Danish audiobooks (hearing impaired & normal)"
+- name: Power 2012
+  link: https://datadryad.org/stash/dataset/doi:10.5061/dryad.070jc
+  subjects: 33
+  signals: EEG
+  minutes: 30
+  stimulus_type: audio
+  tasks: [attention_decoding]
+  extras: "English audiobooks"
+- name: Narayanan 2022
+  link: https://zenodo.org/record/4518754
+  subjects: 30
+  signals: EEG
+  minutes: 40
+  stimulus_type: music
+  tasks: [attention_decoding, music]
+  extras: "Bach Two‑Part Inventions"
+- name: Mesik 2021
+  link: https://openneuro.org/datasets/ds003297
+  subjects: 20
+  signals: EEG
+  minutes: 45
+  stimulus_type: music
+  tasks: [attention_decoding, music]
+  extras: "Polyphonic music mixture (solos, duets, trios)"
+- name: Lu 2021
+  link: https://figshare.com/articles/dataset/Chinese_AAD_dataset/13585808
+  subjects: 12
+  signals: EEG
+  minutes: 30
+  stimulus_type: audio
+  tasks: [attention_decoding]
+  extras: "Chinese news programs"
+- name: Broderick 2018
+  link: https://datadryad.org/stash/dataset/doi:10.5061/dryad.2f050
+  subjects: 22
+  signals: EEG
+  minutes: 60
+  stimulus_type: audio
+  tasks: [semantic_decoding]
+  extras: "English audiobooks aligned with linguistic predictors"
+- name: Contini 2023
+  link: https://zenodo.org/record/8328479
+  subjects: 24
+  signals: EEG
+  minutes: 45
+  stimulus_type: audio
+  tasks: [attention_decoding]
+  extras: "Dutch science‑outreach podcasts"
+- name: O’Sullivan 2014
+  link: https://zenodo.org/record/1199021
+  subjects: 16
+  signals: EEG
+  minutes: 46
+  stimulus_type: audio
+  tasks: [attention_decoding]
+  extras: "Used in seminal O’Sullivan selective‑attention paper"
+- name: Gillis 2022
+  link: https://zenodo.org/record/6344963
+  subjects: 18
+  signals: EEG
+  minutes: 35
+  stimulus_type: audio
+  tasks: [attention_decoding]
+  extras: "Dutch fictional stories (multi‑speaker)"
+- name: Lesenfants 2019
+  link: https://zenodo.org/record/2658704
+  subjects: 14
+  signals: EEG
+  minutes: 60
+  stimulus_type: audio
+  tasks: [attention_decoding]
+  extras: "Belgian news radio"
+- name: Hullett 2016
+  link: https://openneuro.org/datasets/ds001415
+  subjects: 32
+  signals: EEG
+  minutes: 20
+  stimulus_type: audio
+  tasks: [attention_decoding]
+  extras: "Mandarin stories"
+- name: Di Liberto 2015
+  link: https://openneuro.org/datasets/ds002836
+  subjects: 20
+  signals: EEG
+  minutes: 30
+  stimulus_type: audio
+  tasks: [semantic_decoding]
+  extras: "English fictional stories"
+- name: Lesenfants 2020
+  link: https://zenodo.org/record/3942267
+  subjects: 19
+  signals: EEG
+  minutes: 30
+  stimulus_type: audio
+  tasks: [attention_decoding]
+  extras: "Dutch short stories (multi‑speaker)"

@@ -1,14 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<h1 class="mb-3">Submit a dataset</h1>
-<form method="post" class="row g-3">
-  <div class="col-md-6"><label class="form-label">Dataset name</label><input type="text" name="name" class="form-control" required></div>
-  <div class="col-md-6"><label class="form-label">Public link / DOI</label><input type="url" name="link" class="form-control" required></div>
-  <div class="col-md-6"><label class="form-label">Signals / modality</label><input type="text" name="signals" class="form-control" placeholder="e.g. EEG + pupil" required></div>
-  <div class="col-md-6"><label class="form-label">Subjects & duration</label><input type="text" name="meta" class="form-control" placeholder="e.g. 20 subs, 30 min each" required></div>
-  <div class="col-12"><label class="form-label">Suggested task(s)</label><input type="text" name="tasks" class="form-control" placeholder="comma‑separated (e.g. attention_decoding, emotion)" required></div>
-  <div class="col-md-6"><label class="form-label">Contact email</label><input type="email" name="email" class="form-control" required></div>
-  <div class="col-12"><label class="form-label">Short description (optional)</label><textarea name="description" class="form-control" rows="3"></textarea></div>
-  <div class="col-12"><button type="submit" class="btn btn-info">Submit</button></div>
-</form>
+<h1 class="mb-4">Submit a dataset</h1>
+<div class="ratio ratio-4x3">
+  <iframe src="{{ form_embed }}" class="border-0" loading="lazy">Loading…</iframe>
+</div>
 {% endblock %}
