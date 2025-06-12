@@ -16,9 +16,12 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
   /* outline variants keep their default backgrounds when active */
 }
 
-/* Signals row: white pill turns solid when active */
+/* Signals row:*/
+.btn-outline-light:hover,
 .btn-outline-light.active,
 .btn-outline-light:active {
-  background-color: var(--bs-light);
-  color: #000;
+  background-color: var(--bs-light);   /* fills white */
+  color: #000;                         /* black text for contrast */
 }
+
+
