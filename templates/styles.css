@@ -1,2 +1,7 @@
 body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
 .table-dark td, .table-dark th { color: #fff; }
+
+.btn-outline-warning:hover {
+  color: #000;                 /* black text on hover */
+  background-color: var(--bs-warning);
+}
