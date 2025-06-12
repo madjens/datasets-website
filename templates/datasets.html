@@ -1,40 +1,29 @@
-{% extends "base.html" %}
-{% block content %}
-<h1 class="mb-3">Public datasets {% if filter_label %}<small class="text-info">({{ filter_label }})</small>{% endif %}</h1>
-<!-- Row 1: modalities -->
-<div class="d-flex flex-wrap gap-2 mb-3">
-  {% for m in modalities %}
-  <a href="/modality/{{ m|lower }}" class="btn btn-sm btn-outline-light">{{ m }}</a>
-  {% endfor %}
-</div>
-<!-- Row 2: tasks -->
-<div class="d-flex flex-wrap gap-2 mb-4">
-  {% for t in tasks %}
-  <a href="/task/{{ t }}" class="btn btn-sm btn-outline-info">{{ t.replace('_',' ') }}</a>
-  {% endfor %}
-</div>
-<table class="table table-dark table-hover table-bordered align-middle">
-  <thead>
+<table class="table table-dark table-hover table-bordered align-middle table-sm">
+  <thead class="align-middle text-nowrap">
     <tr>
-      <th>Dataset</th><th>Subs</th><th>Signals</th><th>Min</th><th>Stimulus</th><th>Tasks</th><th>Link</th>
+      <th>Dataset</th><th>Subs</th><th>Signals</th><th>System</th>
+      <th>Min</th><th>Stimulus<br>type</th><th>Stimuli&nbsp;descr.</th>
+      <th>Tasks</th><th>Population</th><th>Talker sex</th>
+      <th>Competing<br>talkers</th><th>Publication</th><th>Link</th>
     </tr>
   </thead>
   <tbody>
     {% for d in datasets %}
-    <tr>
+    <tr class="align-middle">
       <td>{{ d.name }}</td>
       <td>{{ d.subjects }}</td>
       <td>{{ d.signals }}</td>
+      <td>{{ d.neurorecording_system }}</td>
       <td>{{ d.minutes }}</td>
       <td>{{ d.stimulus_type }}</td>
-      <td>
-        {% for t in d.tasks %}
-          <a href="/task/{{ t }}" class="link-info text-decoration-none">{{ t.replace('_',' ') }}</a>{% if not loop.last %}, {% endif %}
-        {% endfor %}
-      </td>
+      <td style="max-width:18rem" class="text-wrap">{{ d.stimuli_description }}</td>
+      <td>{% for t in d.tasks %}<a href="/task/{{ t }}" class="link-info text-decoration-none">{{ t.replace('_',' ') }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</td>
+      <td>{{ d.participant_population }}</td>
+      <td>{{ d.talker_sex }}</td>
+      <td>{{ d.competing_talker_sex }}</td>
+      <td style="max-width:18rem" class="text-wrap">{{ d.publication }}</td>
       <td><a href="{{ d.link }}" class="btn btn-sm btn-outline-info" target="_blank">Open</a></td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
-{% endblock %}
