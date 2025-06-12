@@ -1,7 +1,17 @@
+# === templates/datasets.html ===
 {% extends "base.html" %}
 {% block content %}
-<h1 class="mb-3">Public datasets</h1>
-<p class="mb-4">Filter by modality using the navigation bar.</p>
+<h1 class="mb-3">Public datasets {% if filter_label %}<small class="text-info">({{ filter_label }})</small>{% endif %}</h1>
+<div class="d-flex flex-wrap gap-2 mb-4">
+  <!-- modality filter pills -->
+  {% for m in modalities %}
+  <a href="/modality/{{ m|lower }}" class="btn btn-sm btn-outline-light">{{ m }}</a>
+  {% endfor %}
+  <!-- task filter pills -->
+  {% for t in tasks %}
+  <a href="/task/{{ t }}" class="btn btn-sm btn-outline-info">{{ t.replace('_',' ') }}</a>
+  {% endfor %}
+</div>
 <table class="table table-dark table-hover table-bordered align-middle">
   <thead>
     <tr>
@@ -16,7 +26,11 @@
       <td>{{ d.signals }}</td>
       <td>{{ d.minutes }}</td>
       <td>{{ d.stimulus_type }}</td>
-      <td>{{ d.tasks | join(', ') }}</td>
+      <td>
+        {% for t in d.tasks %}
+          <a href="/task/{{ t }}" class="link-info text-decoration-none">{{ t.replace('_',' ') }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </td>
       <td><a href="{{ d.link }}" class="btn btn-sm btn-outline-info" target="_blank">Open</a></td>
     </tr>
     {% endfor %}
