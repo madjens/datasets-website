@@ -40,6 +40,7 @@ def datasets():
         datasets=DATASETS,
         modalities=ALL_MODALITIES,
         tasks=ALL_TASKS,
+        stimtypes=ALL_STIMTYPES,
         filter_label=None,
     )
 
@@ -51,6 +52,7 @@ def modality(name):
         datasets=rows,
         modalities=ALL_MODALITIES,
         tasks=ALL_TASKS,
+        stimtypes=ALL_STIMTYPES,
         filter_label=f"Modality: {name.upper()}",
     )
 
@@ -62,6 +64,7 @@ def task(task):
         datasets=rows,
         modalities=ALL_MODALITIES,
         tasks=ALL_TASKS,
+        stimtypes=ALL_STIMTYPES,
         filter_label=f"Task: {task.replace('_',' ').title()}",
     )
 
@@ -74,5 +77,19 @@ def contact():
     # simply render the Google Form iframe
     return render_template("contact.html", form_embed=GOOGLE_FORM_EMBED)
 
+ALL_STIMTYPES = sorted({d["stimulus_type"] for d in DATASETS})
+
+@app.route("/stimulus/<stype>")
+def stimulus(stype):
+    rows = [d for d in DATASETS if d["stimulus_type"] == stype]
+    return render_template(
+        "datasets.html",
+        datasets=rows,
+        modalities=ALL_MODALITIES,
+        tasks=ALL_TASKS,
+        stimtypes=ALL_STIMTYPES,
+        filter_label=f"Stimulus: {stype}",
+    )
+    
 if __name__ == "__main__":
     app.run(debug=True)
