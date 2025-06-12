@@ -1,0 +1,65 @@
+# === data/datasets.yaml ===
+- name: Fuglsang AAD
+  link: https://zenodo.org/record/1199011
+  subjects: 18
+  signals: EEG
+  minutes: 20
+  stimulus_type: audio
+  tasks: [attention_decoding]
+  extras: "Room acoustics, attended‑speaker labels"
+- name: KU Leuven AAD v2
+  link: https://zenodo.org/record/4004271
+  subjects: 16
+  signals: EEG
+  minutes: 72
+  stimulus_type: audio
+  tasks: [attention_decoding, audiovisual_aad]
+  extras: "Ear‑of‑attention, gaze condition"
+- name: MEG‑MASC
+  link: https://osf.io/ag3kj/
+  subjects: 27
+  signals: MEG
+  minutes: 240
+  stimulus_type: audio
+  tasks: [semantic_decoding]
+  extras: "Word & phoneme onsets, comprehension Qs"
+- name: LibriBrain
+  link: https://arxiv.org/abs/2506.02098
+  subjects: 1
+  signals: MEG
+  minutes: 3000
+  stimulus_type: audio
+  tasks: [speech_recognition, phoneme_classification]
+  extras: "Train/val/test splits, loaders"
+- name: Ershaid CT‑Noise
+  link: https://osf.io/asn2k/
+  subjects: 49
+  signals: EEG + pupil
+  minutes: 30
+  stimulus_type: audio
+  tasks: [listening_effort_decoding]
+  extras: "SNR levels, literacy, effort ratings"
+- name: ERP CORE – N400
+  link: https://digitalcommons.unomaha.edu/psychfacpub/283/  # DOI 10.18115/D5JW4R
+  subjects: 40
+  signals: EEG
+  minutes: 25
+  stimulus_type: visual
+  tasks: [semantic_congruency_decoding]
+  extras: "Related vs unrelated triggers"
+- name: DEAP
+  link: https://www.eecs.qmul.ac.uk/mmv/datasets/deap/
+  subjects: 32
+  signals: EEG + HR + GSR + EMG
+  minutes: 40
+  stimulus_type: audiovisual
+  tasks: [emotion_classification]
+  extras: "Valence & arousal ratings 1–9"
+- name: Child fNIRS AIW
+  link: https://hdl.handle.net/2027.42/155270
+  subjects: 51
+  signals: fNIRS
+  minutes: 12
+  stimulus_type: audio
+  tasks: [story_comprehension, theory_of_mind]
+  extras: "Word‑level surprisal, ToM & emotion labels"

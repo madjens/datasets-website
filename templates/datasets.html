@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="mb-3">Public datasets</h1>
+<p class="mb-4">Filter by modality using the navigation bar.</p>
+<table class="table table-dark table-hover table-bordered align-middle">
+  <thead>
+    <tr>
+      <th>Dataset</th><th>Subs</th><th>Signals</th><th>Min</th><th>Stimulus</th><th>Tasks</th><th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for d in datasets %}
+    <tr>
+      <td>{{ d.name }}</td>
+      <td>{{ d.subjects }}</td>
+      <td>{{ d.signals }}</td>
+      <td>{{ d.minutes }}</td>
+      <td>{{ d.stimulus_type }}</td>
+      <td>{{ d.tasks | join(', ') }}</td>
+      <td><a href="{{ d.link }}" class="btn btn-sm btn-outline-info" target="_blank">Open</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

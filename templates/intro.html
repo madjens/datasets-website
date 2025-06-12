@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center">
+  {{ intro_html | safe }}
+  <div class="mt-4 d-flex justify-content-center gap-3">
+    <a href="/datasets" class="btn btn-info btn-lg">Browse datasets</a>
+    <a href="/contact" class="btn btn-outline-light btn-lg">Add your dataset</a>
+  </div>
+</div>
+{% endblock %}
