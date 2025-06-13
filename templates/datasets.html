@@ -1,43 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
-<h1 class="mb-3">Public datasets {% if filter_label %}<small class="text-info">({{ filter_label }})</small>{% endif %}</h1>
+<h1 class="mb-3">
+  Public datasets
+  {% if filter_label %}
+    <small class="text-info">({{ filter_label }})</small>
+  {% endif %}
+</h1>
+
+<!-- --------------- FILTER BAR ---------------- -->
+<div class="mb-4">
 
  <!-- Signals row -->
   <div class="border border-light rounded-3 p-2 mb-3">
-    <span class="fw-semibold text-light me-2">Signals</span>
-    {% for m in modalities %}
-    <button type="button"
-            class="btn btn-sm btn-outline-light filter-pill"
-            data-filter-group="signal" data-filter-value="{{ m|lower }}">
-      {{ m }}
-    </button>
-    {% endfor %}
-  </div>
-  
-  <!-- Tasks row -->
+	<span class="fw-semibold text-light me-2">Signals</span>
+	 {% for m in modalities %}
+	  <button type="button"
+			class="btn btn-sm btn-outline-light filter-pill"
+			data-filter-group="signal"
+			data-filter-value="{{ m|lower|trim }}">
+		 {{ m }}
+	  </button>
+	  {% endfor %}
+   </div>
+
+  <!-- Tasks row (skip “music”) -->
   <div class="border border-info rounded-3 p-2 mb-3">
     <span class="fw-semibold text-info me-2">Tasks</span>
     {% for t in tasks if t != 'music' %}
-    <button type="button"
-            class="btn btn-sm btn-outline-info filter-pill"
-            data-filter-group="task" data-filter-value="{{ t }}">
-      {{ t.replace('_',' ') }}
-    </button>
+      <button type="button"
+              class="btn btn-sm btn-outline-info filter-pill"
+              data-filter-group="task"
+              data-filter-value="{{ t }}">
+        {{ t.replace('_',' ') }}
+      </button>
     {% endfor %}
   </div>
-  
+
   <!-- Stimulus-type row -->
   <div class="border border-warning rounded-3 p-2">
     <span class="fw-semibold text-warning me-2">Stimulus type</span>
     {% for s in stimtypes %}
-    <button type="button"
-            class="btn btn-sm btn-outline-warning filter-pill text-uppercase"
-            data-filter-group="stim" data-filter-value="{{ s }}">
-      {{ s }}
-    </button>
+      <button type="button"
+              class="btn btn-sm btn-outline-warning filter-pill text-uppercase"
+              data-filter-group="stim"
+              data-filter-value="{{ s }}">
+        {{ s }}
+      </button>
     {% endfor %}
   </div>
 </div>
+<!-- --------------- END FILTER BAR ------------ -->
 
 <table class="table table-dark table-hover table-bordered align-middle table-sm">
   <thead class="align-middle text-nowrap">
@@ -48,71 +60,82 @@
       <th>Competing&nbsp;talkers</th><th>Publication</th><th>Link</th>
     </tr>
   </thead>
- <tbody>
-  {% for d in datasets %}
-   <tr class="align-middle"
-      data-signal="{{ ','.join(d.signals.split('+')|map('trim')|map('lower')) }}"
-      data-stim="{{ d.stimulus_type }}"
-      data-task="{{ ','.join(d.tasks) }}">
-    <td>{{ d.name }}</td>
-    <td>{{ d.subjects }}</td>
 
-    <!-- Signals cell = clickable -->
+  <tbody>
+	 {% for d in datasets %}
+	   {% set sig_list = [] %}
+	   {% for s in d.signals.split('+') %}
+		  {% set _ = sig_list.append(s.strip().lower()) %}
+	   {% endfor %}
+
+       <tr class="align-middle"
+         data-signal="{{ sig_list|join(',') }}"
+         data-stim="{{ d.stimulus_type }}"
+         data-task="{{ ','.join(d.tasks) }}">
+      <td>{{ d.name }}</td>
+      <td>{{ d.subjects }}</td>
+
+	<!-- Signals cell = clickable -->
 	<td>
-	  {% for sig in d.signals.split('+') %}
+	  {% for sig in sig_list %}
 		<a href="javascript:void(0)"
 		   class="link-light text-decoration-none table-tag"
 		   data-filter-group="signal"
-		   data-filter-value="{{ sig.strip()|lower }}">
-		  {{ sig.strip() }}
+		   data-filter-value="{{ sig|lower|trim }}">
+		  {{ sig.upper() if sig == 'fnirs' else sig.capitalize() }}
 		</a>{% if not loop.last %}, {% endif %}
 	  {% endfor %}
 	</td>
 
-    <td>{{ d.neurorecording_system }}</td>
-    <td>{{ d.minutes }}</td>
-    <td>
-      <a href="javascript:void(0)"
-         class="link-warning text-decoration-none table-tag"
-         data-filter-group="stim"
-         data-filter-value="{{ d.stimulus_type }}">
-        {{ d.stimulus_type }}
-      </a>
-    </td>
-    <td class="text-wrap" style="max-width:18rem">{{ d.stimuli_description }}</td>
+      <td>{{ d.neurorecording_system }}</td>
+      <td>{{ d.minutes }}</td>
 
-    <!-- Tasks cell -->
-    <td>
-      {% for t in d.tasks if t != 'music' %}
-      <a href="javascript:void(0)"
-         class="link-info text-decoration-none table-tag"
-         data-filter-group="task"
-         data-filter-value="{{ t }}">
-        {{ t.replace('_',' ') }}
-      </a>{% if not loop.last %}, {% endif %}
-      {% endfor %}
-    </td>
+      <!-- Stimulus type (clickable) -->
+      <td>
+        <a href="javascript:void(0)"
+           class="link-warning text-decoration-none table-tag"
+           data-filter-group="stim"
+           data-filter-value="{{ d.stimulus_type }}">
+          {{ d.stimulus_type }}
+        </a>
+      </td>
 
-    <td>{{ d.participant_population }}</td>
-    <td>{{ d.talker_sex }}</td>
-    <td>{{ d.competing_talker_sex }}</td>
-    <td class="text-wrap" style="max-width:18rem">{{ d.publication }}</td>
-    <td>
-      <a href="{{ d.link }}" class="btn btn-sm btn-outline-info" target="_blank">Open</a>
-    </td>
-  </tr>
+      <td class="text-wrap" style="max-width:18rem">{{ d.stimuli_description }}</td>
+
+      <!-- Tasks cell (skip “music”) -->
+      <td>
+        {% for t in d.tasks if t != 'music' %}
+          <a href="javascript:void(0)"
+             class="link-info text-decoration-none table-tag"
+             data-filter-group="task"
+             data-filter-value="{{ t }}">
+            {{ t.replace('_',' ') }}
+          </a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </td>
+
+      <td>{{ d.participant_population }}</td>
+      <td>{{ d.talker_sex }}</td>
+      <td>{{ d.competing_talker_sex }}</td>
+      <td class="text-wrap" style="max-width:18rem">{{ d.publication }}</td>
+      <td><a href="{{ d.link }}" class="btn btn-sm btn-outline-info" target="_blank">Open</a></td>
+    </tr>
   {% endfor %}
-  <script>
+  </tbody>
+</table>
+
+<!-- --------------- FILTER SCRIPT -------------- -->
+<script>
 (() => {
   const state = { signal: new Set(), task: new Set(), stim: new Set() };
 
   function updateTable() {
     document.querySelectorAll("tbody tr").forEach(row => {
-      const match =
-        (!state.signal.size || state.signal.has(row.dataset.signal)) &&
-        (!state.stim.size   || state.stim.has(row.dataset.stim))   &&
-        (!state.task.size   || [...state.task]
-            .every(t => row.dataset.task.includes(t)));
+      const sigList = row.dataset.signal.split(',').map(s => s.trim());
+	  const match =
+	    (!state.signal.size || [...state.signal].some(s => sigList.includes(s))) &&
+	    (!state.stim.size   || state.stim.has(row.dataset.stim))                 &&
+	    (!state.task.size   || [...state.task].every(t => row.dataset.task.includes(t)));
       row.style.display = match ? "" : "none";
     });
   }
@@ -135,7 +158,5 @@
   });
 })();
 </script>
-  
-</tbody>
-</table>
+<!-- --------------- END SCRIPT ----------------- -->
 {% endblock %}
