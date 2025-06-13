@@ -261,7 +261,7 @@
 
 - name: The Brain, Body, and Behaviour Dataset
   link: https://bbbd.pythonanywhere.com/
-  paper: "https://www.biorxiv.org/content/10.1101/2025.04.29.651259v1"
+  paper: https://www.biorxiv.org/content/10.1101/2025.04.29.651259v1
   subjects: 178
   signals: EEG + HR + GSR + Pupil + Gaze + Respiration + Head
   neurorecording_system: "EEG 64‑channel BioSemi"
@@ -276,7 +276,7 @@
   publication: "Madsen et al., *bioRxiv* 2025"
   extras: "Memory questions, ASRS, DigitSpan"
   
-  - name: Biesmans 2017
+- name: Biesmans 2017
   link: https://zenodo.org/record/4004271
   paper: https://ieeexplore.ieee.org/document/7891541
   subjects: 16
