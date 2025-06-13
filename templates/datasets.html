@@ -122,7 +122,13 @@
         <td>{{ d.talker_sex }}</td>
         <td>{{ d.competing_talker_sex }}</td>
         <td class="text-wrap" style="max-width:18rem">{{ d.publication }}</td>
-        <td><a href="{{ d.link }}" class="btn btn-sm btn-outline-info" target="_blank">Open</a></td>
+        <td>
+		  <a href="{{ d.link }}" class="btn btn-sm btn-outline-info mb-1" target="_blank">Dataset</a>
+		  {% if d.paper %}
+			<a href="{{ d.paper }}" class="btn btn-sm btn-outline-light mb-1" target="_blank">Paper</a>
+		  {% endif %}
+		</td>
+
       </tr>
     {% endfor %}
   </tbody>
