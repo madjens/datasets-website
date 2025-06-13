@@ -10,19 +10,18 @@
 <!-- --------------- FILTER BAR ---------------- -->
 <div class="mb-4">
 
- <!-- Signals row -->
+  <!-- Signals row -->
   <div class="border border-light rounded-3 p-2 mb-3">
-	<span class="fw-semibold text-light me-2">Signals</span>
-	 {% for m in modalities %}
-		{% for m in modalities %}
-		  <button type="button"
-				  class="btn btn-sm btn-outline-light filter-pill"
-				  data-filter-group="signal"
-				  data-filter-value="{{ m|lower }}">
-			{{ m }}
-		  </button>
-		{% endfor %}
-   </div>
+    <span class="fw-semibold text-light me-2">Signals</span>
+    {% for m in modalities %}
+      <button type="button"
+              class="btn btn-sm btn-outline-light filter-pill"
+              data-filter-group="signal"
+              data-filter-value="{{ m|lower }}">
+        {{ m }}
+      </button>
+    {% endfor %}
+  </div>
 
   <!-- Tasks row (skip “music”) -->
   <div class="border border-info rounded-3 p-2 mb-3">
@@ -63,66 +62,69 @@
   </thead>
 
   <tbody>
-	 {% for d in datasets %}
-	   {% set sig_list = [] %}
-	   {% for s in d.signals.split('+') %}
-		  {% set _ = sig_list.append(s.strip().lower()) %}
-	   {% endfor %}
+    {% for d in datasets %}
+      {# Build a list of all signals, preserve original case for display, use lower-case for data-attribute #}
+      {% set sig_list = [] %}
+      {% set sig_display_list = [] %}
+      {% for s in d.signals.split('+') %}
+        {% set sig = s.strip() %}
+        {% set _ = sig_list.append(sig.lower()) %}
+        {% set _ = sig_display_list.append(sig) %}
+      {% endfor %}
 
-       <tr class="align-middle"
-         data-signal="{{ sig_list|join(',') }}"
-         data-stim="{{ d.stimulus_type }}"
-         data-task="{{ ','.join(d.tasks) }}">
-      <td>{{ d.name }}</td>
-      <td>{{ d.subjects }}</td>
+      <tr class="align-middle"
+          data-signal="{{ sig_list|join(',') }}"
+          data-stim="{{ d.stimulus_type }}"
+          data-task="{{ ','.join(d.tasks) }}">
+        <td>{{ d.name }}</td>
+        <td>{{ d.subjects }}</td>
 
-	<!-- Signals cell = clickable -->
-	<td>
-		{% for origsig in d.signals.split('+') %}
-		  {% set sig = origsig.strip() %}
-		  <a href="javascript:void(0)"
-			 class="link-light text-decoration-none table-tag"
-			 data-filter-group="signal"
-			 data-filter-value="{{ sig|lower }}">
-			{{ sig }}
-		  </a>{% if not loop.last %}, {% endif %}
-		{% endfor %}
-	</td>
+        <!-- Signals cell = clickable, preserve original case -->
+        <td>
+          {% for sig in sig_display_list %}
+            <a href="javascript:void(0)"
+               class="link-light text-decoration-none table-tag"
+               data-filter-group="signal"
+               data-filter-value="{{ sig|lower }}">
+              {{ sig }}
+            </a>{% if not loop.last %}, {% endif %}
+          {% endfor %}
+        </td>
 
-      <td>{{ d.neurorecording_system }}</td>
-      <td>{{ d.minutes }}</td>
+        <td>{{ d.neurorecording_system }}</td>
+        <td>{{ d.minutes }}</td>
 
-      <!-- Stimulus type (clickable) -->
-      <td>
-        <a href="javascript:void(0)"
-           class="link-warning text-decoration-none table-tag"
-           data-filter-group="stim"
-           data-filter-value="{{ d.stimulus_type }}">
-          {{ d.stimulus_type }}
-        </a>
-      </td>
-
-      <td class="text-wrap" style="max-width:18rem">{{ d.stimuli_description }}</td>
-
-      <!-- Tasks cell (skip “music”) -->
-      <td>
-        {% for t in d.tasks if t != 'music' %}
+        <!-- Stimulus type (clickable) -->
+        <td>
           <a href="javascript:void(0)"
-             class="link-info text-decoration-none table-tag"
-             data-filter-group="task"
-             data-filter-value="{{ t }}">
-            {{ t.replace('_',' ') }}
-          </a>{% if not loop.last %}, {% endif %}
-        {% endfor %}
-      </td>
+             class="link-warning text-decoration-none table-tag"
+             data-filter-group="stim"
+             data-filter-value="{{ d.stimulus_type }}">
+            {{ d.stimulus_type }}
+          </a>
+        </td>
 
-      <td>{{ d.participant_population }}</td>
-      <td>{{ d.talker_sex }}</td>
-      <td>{{ d.competing_talker_sex }}</td>
-      <td class="text-wrap" style="max-width:18rem">{{ d.publication }}</td>
-      <td><a href="{{ d.link }}" class="btn btn-sm btn-outline-info" target="_blank">Open</a></td>
-    </tr>
-  {% endfor %}
+        <td class="text-wrap" style="max-width:18rem">{{ d.stimuli_description }}</td>
+
+        <!-- Tasks cell (skip “music”) -->
+        <td>
+          {% for t in d.tasks if t != 'music' %}
+            <a href="javascript:void(0)"
+               class="link-info text-decoration-none table-tag"
+               data-filter-group="task"
+               data-filter-value="{{ t }}">
+              {{ t.replace('_',' ') }}
+            </a>{% if not loop.last %}, {% endif %}
+          {% endfor %}
+        </td>
+
+        <td>{{ d.participant_population }}</td>
+        <td>{{ d.talker_sex }}</td>
+        <td>{{ d.competing_talker_sex }}</td>
+        <td class="text-wrap" style="max-width:18rem">{{ d.publication }}</td>
+        <td><a href="{{ d.link }}" class="btn btn-sm btn-outline-info" target="_blank">Open</a></td>
+      </tr>
+    {% endfor %}
   </tbody>
 </table>
 
@@ -134,10 +136,10 @@
   function updateTable() {
     document.querySelectorAll("tbody tr").forEach(row => {
       const sigList = row.dataset.signal.split(',').map(s => s.trim());
-	  const match =
-	    (!state.signal.size || [...state.signal].some(s => sigList.includes(s))) &&
-	    (!state.stim.size   || state.stim.has(row.dataset.stim))                 &&
-	    (!state.task.size   || [...state.task].every(t => row.dataset.task.includes(t)));
+      const match =
+        (!state.signal.size || [...state.signal].some(s => sigList.includes(s))) &&
+        (!state.stim.size   || state.stim.has(row.dataset.stim))                 &&
+        (!state.task.size   || [...state.task].every(t => row.dataset.task.includes(t)));
       row.style.display = match ? "" : "none";
     });
   }
