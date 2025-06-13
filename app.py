@@ -25,7 +25,7 @@ with open(ROOT / "data" / "datasets.yaml", "r", encoding="utf-8") as f:
 INTRO_HTML = load_md("intro.md")
 ABOUT_HTML = load_md("about.md")
 
-ALL_MODALITIES = sorted({sig.strip().split(" ")[0] for d in DATASETS for sig in d["signals"].split("+")})
+ALL_MODALITIES = sorted({sig.strip() for d in DATASETS for sig in d["signals"].split("+")})
 ALL_TASKS = sorted({t for d in DATASETS for t in d["tasks"]})
 
 # ---------- routes ----------

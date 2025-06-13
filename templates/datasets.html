@@ -14,13 +14,14 @@
   <div class="border border-light rounded-3 p-2 mb-3">
 	<span class="fw-semibold text-light me-2">Signals</span>
 	 {% for m in modalities %}
-	  <button type="button"
-			class="btn btn-sm btn-outline-light filter-pill"
-			data-filter-group="signal"
-			data-filter-value="{{ m|lower|trim }}">
-		 {{ m }}
-	  </button>
-	  {% endfor %}
+		{% for m in modalities %}
+		  <button type="button"
+				  class="btn btn-sm btn-outline-light filter-pill"
+				  data-filter-group="signal"
+				  data-filter-value="{{ m|lower }}">
+			{{ m }}
+		  </button>
+		{% endfor %}
    </div>
 
   <!-- Tasks row (skip “music”) -->
@@ -77,14 +78,15 @@
 
 	<!-- Signals cell = clickable -->
 	<td>
-	  {% for sig in sig_list %}
-		<a href="javascript:void(0)"
-		   class="link-light text-decoration-none table-tag"
-		   data-filter-group="signal"
-		   data-filter-value="{{ sig|lower|trim }}">
-		  {{ sig.upper() if sig == 'fnirs' else sig.capitalize() }}
-		</a>{% if not loop.last %}, {% endif %}
-	  {% endfor %}
+		{% for origsig in d.signals.split('+') %}
+		  {% set sig = origsig.strip() %}
+		  <a href="javascript:void(0)"
+			 class="link-light text-decoration-none table-tag"
+			 data-filter-group="signal"
+			 data-filter-value="{{ sig|lower }}">
+			{{ sig }}
+		  </a>{% if not loop.last %}, {% endif %}
+		{% endfor %}
 	</td>
 
       <td>{{ d.neurorecording_system }}</td>
