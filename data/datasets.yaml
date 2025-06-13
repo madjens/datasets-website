@@ -70,7 +70,7 @@
 - name: Ershaid CT‑Noise
   link: https://osf.io/asn2k/
   subjects: 49
-  signals: EEG + pupil
+  signals: EEG + Pupil
   neurorecording_system: "EEG 64‑channel BioSemi + EyeLink"
   minutes: 30
   stimulus_type: audio

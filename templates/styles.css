@@ -16,12 +16,11 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
   /* outline variants keep their default backgrounds when active */
 }
 
-/* Signals pills: visible hover + active */
 .btn-outline-light:hover,
 .btn-outline-light.active,
 .btn-outline-light:active {
-  background-color: #f8f9fa !important;   /* solid white */
+  background-color: #f8f9fa !important;
   color: #000 !important;
-  box-shadow: 0 0 0 0.25rem rgba(255,255,255,.25);  /* subtle halo */
+  border-color: #f8f9fa !important;
 }
 

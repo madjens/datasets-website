@@ -50,23 +50,24 @@
   </thead>
  <tbody>
   {% for d in datasets %}
-  <tr class="align-middle"
-      data-signal="{{ d.signals.split()[0]|lower }}"
+   <tr class="align-middle"
+      data-signal="{{ ','.join(d.signals.split('+')|map('trim')|map('lower')) }}"
       data-stim="{{ d.stimulus_type }}"
       data-task="{{ ','.join(d.tasks) }}">
     <td>{{ d.name }}</td>
     <td>{{ d.subjects }}</td>
 
     <!-- Signals cell = clickable -->
-    <td>
-      {% set sig = d.signals.split()[0] %}
-      <a href="javascript:void(0)"
-         class="link-light text-decoration-none table-tag"
-         data-filter-group="signal"
-         data-filter-value="{{ sig|lower }}">
-        {{ sig }}
-      </a>
-    </td>
+	<td>
+	  {% for sig in d.signals.split('+') %}
+		<a href="javascript:void(0)"
+		   class="link-light text-decoration-none table-tag"
+		   data-filter-group="signal"
+		   data-filter-value="{{ sig.strip()|lower }}">
+		  {{ sig.strip() }}
+		</a>{% if not loop.last %}, {% endif %}
+	  {% endfor %}
+	</td>
 
     <td>{{ d.neurorecording_system }}</td>
     <td>{{ d.minutes }}</td>
