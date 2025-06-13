@@ -1,5 +1,4 @@
-# NOTE: Each dataset entry now includes additional optional metadata fields.
-# Blank strings ("") act as placeholders when information is not yet known.
+# NOTE: Blank strings ("") act as placeholders when information is not yet known.
 # Columns: name, link, subjects, signals, neurorecording_system, minutes,
 #          stimulus_type, stimuli_description, tasks, competing_talker_sex,
 #          talker_sex, participant_population, authors, publication, extras
@@ -229,7 +228,6 @@
   publication: "Kaneshiro et al., *Scientific Reports* 2021"
   extras: "ISC and behavioral ratings"
 
-# --- Additional previously included audio datasets (sample only; expand similarly) ---
 - name: Narayanan 2022 Bach Inventions
   link: https://zenodo.org/record/4518754
   subjects: 30
@@ -246,5 +244,18 @@
   publication: "Narayanan et al., *PLoS Biology* 2022"
   extras: "Piano knock‑out auditory scene"
 
-# (Other speech‑decoding entries above such as Broderick 2018, Contini 2023 etc. 
-#  can be extended with the same schema when details become available.)
+- name: The Brain, Body, and Behaviour Dataset
+  link: https://bbbd.pythonanywhere.com/
+  subjects: 178
+  signals: EEG + HR + GSR + Pupil + Gaze + Respiration + Head
+  neurorecording_system: "EEG 64‑channel BioSemi"
+  minutes: 30
+  stimulus_type: audiovisual
+  stimuli_description: "Short educational YouTube videos"
+  tasks: [story_comprehension, single_speaker]
+  competing_talker_sex: ""
+  talker_sex: "mixed"
+  participant_population: "young normal‑hearing"
+  authors: "J. Madsen, et al."
+  publication: "Madsen et al., *bioRxiv* 2025"
+  extras: "Memory questions, ASRS, DigitSpan"
