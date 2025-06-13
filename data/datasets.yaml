@@ -84,7 +84,7 @@
   extras: "SNR levels, literacy, effort ratings"
 
 - name: ERP‑CORE N400
-  link: https://digitalcommons.unomaha.edu/psychfacpub/283/
+  link: https://osf.io/thsqg/
   subjects: 40
   signals: EEG
   neurorecording_system: "EEG 64‑channel BioSemi"
@@ -116,7 +116,7 @@
   extras: "Valence & arousal ratings 1–9"
 
 - name: Child fNIRS AIW
-  link: https://hdl.handle.net/2027.42/155270
+  link: https://pubmed.ncbi.nlm.nih.gov/36243727/
   subjects: 51
   signals: fNIRS
   neurorecording_system: "46‑channel fNIRS system"
@@ -232,7 +232,7 @@
   link: https://zenodo.org/record/4518754
   subjects: 30
   signals: EEG
-  neurorecording_system: "EEG 64‑channel BioSemi"
+  neurorecording_system: "EEG 255‑channel SynAmps RT"
   minutes: 40
   stimulus_type: music
   stimuli_description: "Bach Two‑Part Inventions (cocktail‑piano mixture)"
