@@ -57,13 +57,12 @@
       <th>Dataset</th><th>Subs</th><th>Signals</th><th>System</th>
       <th>Min</th><th>Stimulus&nbsp;type</th><th>Stimuli&nbsp;descr.</th>
       <th>Tasks</th><th>Population</th><th>Talker&nbsp;sex</th>
-      <th>Competing&nbsp;talkers</th><th>Publication</th><th>Link</th>
+      <th>Competing&nbsp;talkers</th><th>Publication</th><th>Links</th>
     </tr>
   </thead>
 
   <tbody>
     {% for d in datasets %}
-      {# Build a list of all signals, preserve original case for display, use lower-case for data-attribute #}
       {% set sig_list = [] %}
       {% set sig_display_list = [] %}
       {% for s in d.signals.split('+') %}
@@ -78,7 +77,6 @@
           data-task="{{ ','.join(d.tasks) }}">
         <td>{{ d.name }}</td>
         <td>{{ d.subjects }}</td>
-
         <!-- Signals cell = clickable, preserve original case -->
         <td>
           {% for sig in sig_display_list %}
@@ -90,10 +88,8 @@
             </a>{% if not loop.last %}, {% endif %}
           {% endfor %}
         </td>
-
         <td>{{ d.neurorecording_system }}</td>
         <td>{{ d.minutes }}</td>
-
         <!-- Stimulus type (clickable) -->
         <td>
           <a href="javascript:void(0)"
@@ -103,9 +99,7 @@
             {{ d.stimulus_type }}
           </a>
         </td>
-
         <td class="text-wrap" style="max-width:18rem">{{ d.stimuli_description }}</td>
-
         <!-- Tasks cell (skip “music”) -->
         <td>
           {% for t in d.tasks if t != 'music' %}
@@ -117,18 +111,16 @@
             </a>{% if not loop.last %}, {% endif %}
           {% endfor %}
         </td>
-
         <td>{{ d.participant_population }}</td>
         <td>{{ d.talker_sex }}</td>
         <td>{{ d.competing_talker_sex }}</td>
         <td class="text-wrap" style="max-width:18rem">{{ d.publication }}</td>
         <td>
-		  <a href="{{ d.link }}" class="btn btn-sm btn-outline-info mb-1" target="_blank">Dataset</a>
-		  {% if d.paper %}
-			<a href="{{ d.paper }}" class="btn btn-sm btn-outline-light mb-1" target="_blank">Paper</a>
-		  {% endif %}
-		</td>
-
+          <a href="{{ d.link }}" class="btn btn-sm btn-outline-info mb-1" target="_blank">Dataset</a>
+          {% if d.paper %}
+            <a href="{{ d.paper }}" class="btn btn-sm btn-outline-light mb-1" target="_blank">Paper</a>
+          {% endif %}
+        </td>
       </tr>
     {% endfor %}
   </tbody>
