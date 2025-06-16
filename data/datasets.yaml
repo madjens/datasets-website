@@ -174,7 +174,7 @@
   publication: "Cantisani et al., *Scientific Reports* 2021"
   extras: "EEG recorded in ecological concert hall"
 
-- name: Di Liberto 2021 Music Attention
+- name: Di Liberto 2021 Music Attention
   link: https://datadryad.org/stash/dataset/doi:10.5061/dryad.g1jwstqmh
   paper: ""
   subjects: 19
@@ -191,7 +191,7 @@
   publication: "Di Liberto et al., *J. Neurophysiology* 2021"
   extras: "Score‑aligned note onsets"
 
-- name: Marion 2021 Music Envelope
+- name: Marion 2021 Music Envelope
   link: https://datadryad.org/stash/dataset/doi:10.5061/dryad.dbrv15f0j
   paper: ""
   subjects: 30
@@ -204,23 +204,23 @@
   competing_talker_sex: ""
   talker_sex: "instrumental + vocals"
   participant_population: "young adults"
-  authors: "G. Marion, et al."
-  publication: "Marion et al., *NeuroImage* 2021"
+  authors: "G. Marion, et al."
+  publication: "Marion et al., *NeuroImage* 2021"
   extras: "Behavioral tapping responses"
 
-- name: Étard 2020 Chorus AAD
+- name: Étard 2020 Chorus AAD
   link: https://zenodo.org/record/4470135
   paper: ""
   subjects: 23
   signals: EEG
-  neurorecording_system: "EEG 64‑channel BioSemi"
+  neurorecording_system: "EEG 64-channel BioSemi"
   minutes: 50
   stimulus_type: music
   stimuli_description: "Choir with spatialized singers (male & female)"
   tasks: [music, attention_decoding, multi_speaker]
   competing_talker_sex: "mixed"
   talker_sex: "mixed"
-  participant_population: "normal‑hearing adults"
+  participant_population: "normal-hearing adults"
   authors: "N. Étard, T. Lalor"
   publication: "Étard & Lalor, *eLife* 2020"
   extras: "Spatial attention cues"
@@ -230,7 +230,7 @@
   paper: ""
   subjects: 20
   signals: EEG
-  neurorecording_system: "EEG 128‑channel BioSemi"
+  neurorecording_system: "EEG 128-channel BioSemi"
   minutes: 80
   stimulus_type: music
   stimuli_description: "Pop songs of varying familiarity"
@@ -238,8 +238,8 @@
   competing_talker_sex: ""
   talker_sex: "instrumental + vocals"
   participant_population: "young adults"
-  authors: "B. Kaneshiro, S. R. Kim, et al."
-  publication: "Kaneshiro et al., *Scientific Reports* 2021"
+  authors: "B. Kaneshiro, S. R. Kim, et al."
+  publication: "Kaneshiro et al., *Scientific Reports* 2021"
   extras: "ISC and behavioral ratings"
 
 - name: Narayanan 2022 Bach Inventions
@@ -247,33 +247,33 @@
   paper: ""
   subjects: 30
   signals: EEG
-  neurorecording_system: "EEG 255‑channel SynAmps RT"
+  neurorecording_system: "EEG 255-channel SynAmps RT"
   minutes: 40
   stimulus_type: music
-  stimuli_description: "Bach Two‑Part Inventions (cocktail‑piano mixture)"
+  stimuli_description: "Bach Two-Part Inventions (cocktail-piano mixture)"
   tasks: [music, attention_decoding]
   competing_talker_sex: ""
   talker_sex: "instrumental"
-  participant_population: "musicians & non‑musicians"
-  authors: "P. Narayanan, et al."
-  publication: "Narayanan et al., *PLoS Biology* 2022"
-  extras: "Piano knock‑out auditory scene"
+  participant_population: "musicians & non-musicians"
+  authors: "P. Narayanan, et al."
+  publication: "Narayanan et al., *PLoS Biology* 2022"
+  extras: "Piano knock-out auditory scene"
 
 - name: The Brain, Body, and Behaviour Dataset
   link: https://bbbd.pythonanywhere.com/
   paper: https://www.biorxiv.org/content/10.1101/2025.04.29.651259v1
   subjects: 178
   signals: EEG + HR + GSR + Pupil + Gaze + Respiration + Head
-  neurorecording_system: "EEG 64‑channel BioSemi"
+  neurorecording_system: "EEG 64-channel BioSemi"
   minutes: 30
   stimulus_type: audiovisual
   stimuli_description: "Short educational YouTube videos"
   tasks: [story_comprehension, single_speaker]
   competing_talker_sex: ""
   talker_sex: "mixed"
-  participant_population: "young normal‑hearing"
-  authors: "J. Madsen, et al."
-  publication: "Madsen et al., *bioRxiv* 2025"
+  participant_population: "young normal-hearing"
+  authors: "J. Madsen, et al."
+  publication: "Madsen et al., *bioRxiv* 2025"
   extras: "Memory questions, ASRS, DigitSpan"
   
 - name: Biesmans 2017
@@ -344,189 +344,801 @@
   publication: "Power et al., Eur J Neurosci. 2012"
   extras: "30 trials x 1 min, dichotic, used in O'Sullivan seminal paper"
 
-- name: Narayanan 2021 miniEEG
-  link: https://osf.io/2fq73/
-  paper: https://iopscience.iop.org/article/10.1088/1741-2552/ac232f
-  subjects: 30
-  signals: EEG
-  neurorecording_system: "EEG 255-channel SynAmps RT"
-  minutes: 24
+- name: RAVDESS
+  link: https://zenodo.org/record/1188976
+  paper: https://zenodo.org/record/1188976
+  subjects: 24
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
   stimulus_type: audio
-  stimuli_description: "Dutch fictional stories"
-  tasks: [attention_decoding, multi_speaker]
-  competing_talker_sex: "male-male"
-  talker_sex: ""
-  participant_population: "young, normal hearing"
-  authors: "A. Mundanad Narayanan, R. Zink, and A. Bertrand"
-  publication: "Narayanan et al., J Neural Eng 2021"
-  extras: "4 trials x 6 min, HRTF-filtered"
+  stimuli_description: "Language: English, Format: Audio/Video, Speech and Song"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Steven R. Livingstone, Frank A. Russo"
+  publication: "Livingstone & Russo, 2018"
+  extras: "Emotions: neutral, calm, happy, sad, angry, fearful, disgust, surprise; Size: 1440 files; License: CC BY-SA 4.0"
 
-- name: Straetmans 2021 Mobile AAD
-  link: https://zenodo.org/record/4452865
-  paper: https://iopscience.iop.org/article/10.1088/1741-2552/ac369c
-  subjects: 20
-  signals: EEG
-  neurorecording_system: "EEG 24-channel EasyCap GmbH/SMARTING"
-  minutes: 30
+- name: TESS
+  link: https://tspace.library.utoronto.ca/handle/1807/24487
+  paper: ""
+  subjects: 2
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
   stimulus_type: audio
-  stimuli_description: "German audiobooks + salient events"
-  tasks: [attention_decoding, multi_speaker]
-  competing_talker_sex: "male-male"
-  talker_sex: ""
-  participant_population: "young, normal hearing"
-  authors: "L. Straetmans, B. Holtze, S. Debener, M. Jaeger, and B. Mirkovic"
-  publication: "Straetmans et al., J Neural Eng 2021"
-  extras: "6 trials x 5 min, recorded in public cafeteria, EOG/EMG/ECG/head motion available"
+  stimuli_description: "Language: English, Format: Audio, 200 target words spoken in 7 emotions"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "female"
+  participant_population: ""
+  authors: "M. S. Simonyan, K. G. MacDonald, T. McAndrews"
+  publication: "Toronto Emotional Speech Set"
+  extras: "Emotions: anger, disgust, fear, happy, pleasant surprise, sadness, neutral; Size: 2800 files; License: CC BY-NC 4.0"
 
-- name: Akram 2016 MEG
-  link: https://github.com/shakram02/MEG-AAD
-  paper: https://www.sciencedirect.com/science/article/pii/S1053811916302642
-  subjects: 7
-  signals: MEG
-  neurorecording_system: "MEG 157-channel"
-  minutes: 6
+- name: EMO-DB
+  link: http://emodb.bilderbar.info/
+  paper: ""
+  subjects: 10
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
   stimulus_type: audio
-  stimuli_description: "English fictional stories"
-  tasks: [attention_decoding, multi_speaker]
-  competing_talker_sex: "male-female"
-  talker_sex: ""
-  participant_population: "young, normal hearing"
-  authors: "S. Akram, A. Presacco, J. Z. Simon, S. A. Shamma, and B. Babadi"
-  publication: "Akram et al., NeuroImage, 2016"
-  extras: "instructed attention switches per trial"
+  stimuli_description: "Language: German, Format: Audio, 10 actors, 7 emotions"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Felix Burkhardt, Astrid Paeschke, Miriam Rolfes, Walter F. Sendlmeier, Benjamin Weiss"
+  publication: "Berlin Database of Emotional Speech (EMO-DB)"
+  extras: "Emotions: anger, boredom, disgust, anxiety/fear, happiness, sadness, neutral; Size: 535 files; License: Public"
 
-- name: Presacco 2019 MEG RT
-  link: https://github.com/shakram02/MEG-AAD
-  paper: https://ieeexplore.ieee.org/document/8856736
-  subjects: 5
-  signals: MEG
-  neurorecording_system: "MEG 157-channel"
-  minutes: 4.5
+- name: CREMA-D
+  link: https://github.com/CheyneyComputerScience/CREMA-D
+  paper: ""
+  subjects: 91
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
   stimulus_type: audio
-  stimuli_description: "English fictional stories"
-  tasks: [attention_decoding, multi_speaker]
-  competing_talker_sex: "male-female"
-  talker_sex: ""
-  participant_population: "young, normal hearing"
-  authors: "A. Presacco, S. Miran, B. Babadi, and J. Z. Simon"
-  publication: "Presacco et al., EMBC 2019"
-  extras: "at-will attention switches per trial"
+  stimuli_description: "Language: English, Format: Audio/Video, 7442 clips from 91 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Harry Emerick, H. Cao, G. G. Duong, R. L. Davis"
+  publication: "Crowd-sourced Emotional Multimodal Actors Dataset (CREMA-D)"
+  extras: "Emotions: anger, disgust, fear, happy, neutral, sad; Size: 7442 files; License: Public Domain"
 
-- name: Brodbeck 2018
-  link: https://osf.io/2sya3/
-  paper: https://www.cell.com/current-biology/fulltext/S0960-9822(18)31493-0
-  subjects: 26
-  signals: MEG
-  neurorecording_system: "MEG 157-channel"
-  minutes: 16
+- name: SAVEE
+  link: http://kahlan.eps.surrey.ac.uk/savee/Database.html
+  paper: ""
+  subjects: 4
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
   stimulus_type: audio
-  stimuli_description: "English audiobooks"
-  tasks: [semantic_decoding, single_speaker]
-  competing_talker_sex: "male-female"
-  talker_sex: ""
-  participant_population: "normal-hearing"
-  authors: "C. Brodbeck, L. E. Hong, and J. Z. Simon"
-  publication: "Brodbeck et al., Curr Biol 2018"
-  extras: "4 trials x 4 repetitions x 1 min"
+  stimuli_description: "Language: English, Format: Audio, 4 male actors, 7 emotions"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male"
+  participant_population: ""
+  authors: "Surrey Audio-Visual Expressed Emotion (SAVEE)"
+  publication: "SAVEE Dataset"
+  extras: "Emotions: anger, disgust, fear, happiness, sadness, surprise, neutral; Size: 480 files; License: Free for research"
 
-- name: Cantisani 2019 MAD-EEG
-  link: https://zenodo.org/record/4537751
-  paper: https://hal.science/hal-02485138
+- name: IEMOCAP
+  link: https://sail.usc.edu/iemocap/index.html
+  paper: ""
+  subjects: 10
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio/Video, 12 hours, 10 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Shrikanth Narayanan, et al."
+  publication: "Interactive Emotional Dyadic Motion Capture Database (IEMOCAP)"
+  extras: "Emotions: angry, happy, sad, neutral, excitement, frustration, fear, surprise, disgust, other; Size: ~12000 files; License: Research use only"
+
+- name: MSP-IMPROV
+  link: https://www.utdallas.edu/~loizou/cimpl
+  paper: ""
+  subjects: 12
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio/Video, 12 actors, 8 sessions"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "University of Texas at Dallas"
+  publication: "MSP-IMPROV"
+  extras: "Emotions: angry, happy, sad, neutral, surprise, disgust, fear, contempt; Size: ~8 hours; License: Research use only"
+
+- name: EMOVO
+  link: http://voice.fub.it/activities/processing-emovo.html
+  paper: ""
+  subjects: 6
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Italian, Format: Audio, 6 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Università di Roma 'La Sapienza'"
+  publication: "EMOVO Corpus"
+  extras: "Emotions: anger, disgust, fear, joy, sadness, surprise, neutral; Size: 588 files; License: CC BY-NC-SA 3.0"
+
+- name: TESS German
+  link: https://www.tessdatabank.com
+  paper: ""
+  subjects: 10
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: German, Format: Audio, 10 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: ""
+  participant_population: ""
+  authors: "Unknown"
+  publication: "TESS German Corpus"
+  extras: "Emotions: anger, disgust, fear, happy, pleasant surprise, sadness, neutral; Size: N/A; License: Research use only"
+
+- name: RAVDESS Song
+  link: https://zenodo.org/record/1188976
+  paper: https://zenodo.org/record/1188976
+  subjects: 24
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio/Video, Song subset"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Steven R. Livingstone, Frank A. Russo"
+  publication: "Livingstone & Russo, 2018"
+  extras: "Emotions: neutral, calm, happy, sad, angry, fearful, disgust, surprise; Size: 1012 files; License: CC BY-SA 4.0"
+
+- name: EMO-DB Berlin
+  link: http://emodb.bilderbar.info/
+  paper: ""
+  subjects: 10
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: German, Format: Audio, 10 actors, 7 emotions"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Felix Burkhardt, Astrid Paeschke, Miriam Rolfes, Walter F. Sendlmeier, Benjamin Weiss"
+  publication: "Berlin Database of Emotional Speech (EMO-DB)"
+  extras: "Emotions: anger, boredom, disgust, anxiety/fear, happiness, sadness, neutral; Size: 535 files; License: Public"
+
+- name: EMOVO Italian
+  link: http://voice.fub.it/activities/processing-emovo.html
+  paper: ""
+  subjects: 6
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Italian, Format: Audio, 6 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Università di Roma 'La Sapienza'"
+  publication: "EMOVO Corpus"
+  extras: "Emotions: anger, disgust, fear, joy, sadness, surprise, neutral; Size: 588 files; License: CC BY-NC-SA 3.0"
+
+- name: MES-P
+  link: https://datashare.is.ed.ac.uk/handle/10283/2651
+  paper: ""
+  subjects: 16
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Mandarin, Format: Audio, 16 speakers"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: ""
+  participant_population: ""
+  authors: "Unknown"
+  publication: "MES-P: Mandarin Emotional Speech - Portrayed"
+  extras: "Emotions: happiness, anger, sadness, surprise, fear, disgust, neutral; Size: 2000 files; License: Free for research"
+
+- name: MES-N
+  link: https://datashare.is.ed.ac.uk/handle/10283/2651
+  paper: ""
+  subjects: 16
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Mandarin, Format: Audio, 16 speakers, natural speech"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: ""
+  participant_population: ""
+  authors: "Unknown"
+  publication: "MES-N: Mandarin Emotional Speech - Natural"
+  extras: "Emotions: happiness, anger, sadness, surprise, fear, disgust, neutral; Size: 1990 files; License: Free for research"
+
+- name: EmoReact
+  link: https://github.com/rhoposit/EmoReact
+  paper: ""
+  subjects: ""
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio, video reactions"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: ""
+  participant_population: ""
+  authors: "Unknown"
+  publication: "EmoReact"
+  extras: "Emotions: happiness, sadness, anger, surprise, disgust, fear, neutral; Size: 1100 files; License: Unknown"
+
+- name: eNTERFACE
+  link: https://zenodo.org/record/1188976
+  paper: ""
+  subjects: 42
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio/Video, 42 subjects"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "eNTERFACE Project"
+  publication: "eNTERFACE Multimodal Emotion Dataset"
+  extras: "Emotions: anger, disgust, fear, happiness, sadness, surprise, neutral; Size: 1280 clips; License: Unknown"
+
+- name: DES
+  link: https://zenodo.org/record/1188976
+  paper: ""
+  subjects: 50
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Dutch, Format: Audio, 50 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "J. M. Goudbeek, E. A. Huis in 't Veld, and J. P. H. van den Bosch"
+  publication: "DES - Dutch Emotional Speech"
+  extras: "Emotions: anger, happiness, sadness, fear, surprise, disgust, neutral; Size: 5000 files; License: Unknown"
+
+- name: RAVDESS Song (subset)
+  link: https://zenodo.org/record/1188976
+  paper: https://zenodo.org/record/1188976
+  subjects: 24
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio/Video, Song subset"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Steven R. Livingstone, Frank A. Russo"
+  publication: "Livingstone & Russo, 2018"
+  extras: "Emotions: neutral, calm, happy, sad, angry, fearful, disgust, surprise; Size: 1012 files; License: CC BY-SA 4.0"
+
+- name: BAVED
+  link: https://zenodo.org/record/3269856
+  paper: ""
+  subjects: 12
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio, British Affective Voices"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "British Affective Voices"
+  publication: "BAVED Dataset"
+  extras: "Emotions: anger, fear, happiness, sadness, neutral; Size: 1152 files; License: CC BY 4.0"
+
+- name: EMOVO
+  link: http://voice.fub.it/activities/processing-emovo.html
+  paper: ""
+  subjects: 6
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Italian, Format: Audio, 6 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Università di Roma 'La Sapienza'"
+  publication: "EMOVO Corpus"
+  extras: "Emotions: anger, disgust, fear, joy, sadness, surprise, neutral; Size: 588 files; License: CC BY-NC-SA 3.0"
+
+- name: SU
+  link: https://susanepress.com/sudataset
+  paper: ""
+  subjects: 6
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Mandarin, Format: Audio, 6 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Suzhou University"
+  publication: "SU Mandarin Dataset"
+  extras: "Emotions: anger, happiness, sadness, surprise, fear, neutral; Size: 720 files; License: Free for research"
+
+- name: Polish Emotional Speech Database (PESD)
+  link: http://www.db.psych.uw.edu.pl/peps.php
+  paper: ""
   subjects: 8
-  signals: EEG
-  neurorecording_system: "EEG 20-channel B-Alert X24 headset"
-  minutes: 31
-  stimulus_type: music
-  stimuli_description: "Polyphonic music mixture (solos, duets, trios)"
-  tasks: [music, attention_decoding]
-  competing_talker_sex: "various instruments"
-  talker_sex: ""
-  participant_population: "young, normal hearing, non-professional musicians"
-  authors: "G. Cantisani, G. Trégoat, S. Essid, G. Richard"
-  publication: "Cantisani et al., SMM Workshop, Interspeech 2019"
-  extras: "EOG, EMG, ECG, head motion available"
-
-- name: Etard 2022 Music
-  link: https://osf.io/bfygj/
-  paper: https://direct.mit.edu/jocn/article/34/3/411/109308
-  subjects: 17
-  signals: EEG
-  neurorecording_system: "EEG 4-channel Ag/AgCl electrodes"
-  minutes: 22.4
-  stimulus_type: music
-  stimuli_description: "Music (Bach's Two-Part Inventions)"
-  tasks: [music, attention_decoding]
-  competing_talker_sex: "piano-guitar"
-  talker_sex: ""
-  participant_population: "young, normal hearing"
-  authors: "O. Etard, R. B. Messaoud, G. Gaugain, and T. Reichenbach"
-  publication: "Etard et al., J Cogn Neurosci 2022"
-  extras: "single instrument available"
-
-- name: Zhang 2023 ASA
-  link: https://doi.org/10.6084/m9.figshare.23930471
-  paper: https://ieeexplore.ieee.org/document/10436564
-  subjects: 21
-  signals: EEG
-  neurorecording_system: "EEG 32-channel EMOTIV Epoc Flex Saline"
-  minutes: 64
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
   stimulus_type: audio
-  stimuli_description: "Chinese news programs"
-  tasks: [attention_decoding, spatial_decoding]
-  competing_talker_sex: "male-female"
-  talker_sex: ""
-  participant_population: "normal hearing"
-  authors: "Y. Zhang, H. Ruan, Z. Yuan, H. Du, X. Gao, and J. Lu"
-  publication: "Zhang et al., ICASSP 2023"
-  extras: "random pairs of competing directions per trial"
+  stimuli_description: "Language: Polish, Format: Audio, 8 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Institute of Psychology, University of Warsaw"
+  publication: "PESD Dataset"
+  extras: "Emotions: anger, joy, fear, sadness, surprise, disgust, neutral; Size: 2240 files; License: Unknown"
 
-- name: Etard 2019 brainstem
-  link: https://osf.io/jf7vc/
-  paper: https://www.sciencedirect.com/science/article/pii/S1053811919306244
-  subjects: 18
-  signals: EEG
-  neurorecording_system: "EEG 64-channel actiCAP"
-  minutes: 20
+- name: MESD
+  link: https://github.com/Bertrand-Benoit/mesd-dataset
+  paper: ""
+  subjects: 8
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
   stimulus_type: audio
-  stimuli_description: "English audiobooks"
-  tasks: [attention_decoding, multi_speaker]
-  competing_talker_sex: "male-female"
-  talker_sex: ""
-  participant_population: "young, normal hearing"
-  authors: "O. Etard, M. Kegler, C. Braiman, A.E. Forte, and T. Reichenbach"
-  publication: "Etard et al., NeuroImage 2019"
-  extras: "brainstem response, dichotic"
+  stimuli_description: "Language: French, Format: Audio, 8 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Unknown"
+  publication: "MESD Dataset"
+  extras: "Emotions: anger, happiness, sadness, surprise, fear, disgust, neutral; Size: 560 files; License: Unknown"
 
-- name: Rotaru 2024
-  link: https://zenodo.org/record/10555322
-  paper: https://iopscience.iop.org/article/10.1088/1741-2552/ad17f9
-  subjects: 13
-  signals: EEG
-  neurorecording_system: "EEG 64-channel BioSemi"
-  minutes: 80
+- name: Polish Emotional Speech Corpus (PESC)
+  link: https://pesc.polsl.pl/
+  paper: ""
+  subjects: 6
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
   stimulus_type: audio
-  stimuli_description: "Dutch science-outreach podcasts"
-  tasks: [attention_decoding, spatial_decoding]
-  competing_talker_sex: "male-male"
-  talker_sex: ""
-  participant_population: "young, normal hearing"
-  authors: "I. Rotaru, S. Geirnaert, N. Heintz, I. Van de Ryck, A. Bertrand,  and T. Francart"
-  publication: "Rotaru et al., J Neural Eng 2024"
-  extras: "4 conditions, EOG also available, audio-visual conditions"
+  stimuli_description: "Language: Polish, Format: Audio, 6 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Silesian University of Technology"
+  publication: "PESC Dataset"
+  extras: "Emotions: anger, joy, fear, sadness, surprise, disgust, neutral; Size: 1800 files; License: Unknown"
 
-- name: Lin 2024 ASA
-  link: https://figshare.com/articles/dataset/ASA_An_Auditory_Spatial_Attention_Dataset_with_Multiple_Speaking_Locations_/23930471
-  paper: https://www.isca-archive.org/interspeech_2024/lin24d_interspeech.html
-  subjects: 20
-  signals: EEG
-  neurorecording_system: "EEG 64-channel Easycap"
-  minutes: 24
+- name: RAVDESS
+  link: https://zenodo.org/record/1188976
+  paper: https://zenodo.org/record/1188976
+  subjects: 24
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
   stimulus_type: audio
-  stimuli_description: "Mandarin stories"
-  tasks: [attention_decoding, spatial_decoding]
-  competing_talker_sex: "male-female"
+  stimuli_description: "Language: English, Format: Audio/Video, Speech and Song"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Steven R. Livingstone, Frank A. Russo"
+  publication: "Livingstone & Russo, 2018"
+  extras: "Emotions: neutral, calm, happy, sad, angry, fearful, disgust, surprise; Size: 1440 files; License: CC BY-SA 4.0"
+
+- name: VAM
+  link: https://www.db-thueringen.de/receive/dbt_mods_00021952
+  paper: ""
+  subjects: 47
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: German, Format: Audio/Video, real TV broadcasts"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "University of Augsburg"
+  publication: "VAM Dataset"
+  extras: "Emotions: arousal, valence, dominance (continuous); Size: 946 files; License: Research only"
+
+- name: TESS
+  link: https://tspace.library.utoronto.ca/handle/1807/24487
+  paper: ""
+  subjects: 2
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio, 200 target words spoken in 7 emotions"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "female"
+  participant_population: ""
+  authors: "M. S. Simonyan, K. G. MacDonald, T. McAndrews"
+  publication: "Toronto Emotional Speech Set"
+  extras: "Emotions: anger, disgust, fear, happy, pleasant surprise, sadness, neutral; Size: 2800 files; License: CC BY-NC 4.0"
+
+- name: SAVEE
+  link: http://kahlan.eps.surrey.ac.uk/savee/Database.html
+  paper: ""
+  subjects: 4
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio, 4 male actors, 7 emotions"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male"
+  participant_population: ""
+  authors: "Surrey Audio-Visual Expressed Emotion (SAVEE)"
+  publication: "SAVEE Dataset"
+  extras: "Emotions: anger, disgust, fear, happiness, sadness, surprise, neutral; Size: 480 files; License: Free for research"
+
+- name: EMO-DB
+  link: http://emodb.bilderbar.info/
+  paper: ""
+  subjects: 10
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: German, Format: Audio, 10 actors, 7 emotions"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Felix Burkhardt, Astrid Paeschke, Miriam Rolfes, Walter F. Sendlmeier, Benjamin Weiss"
+  publication: "Berlin Database of Emotional Speech (EMO-DB)"
+  extras: "Emotions: anger, boredom, disgust, anxiety/fear, happiness, sadness, neutral; Size: 535 files; License: Public"
+
+- name: CREMA-D
+  link: https://github.com/CheyneyComputerScience/CREMA-D
+  paper: ""
+  subjects: 91
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio/Video, 7442 clips from 91 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Harry Emerick, H. Cao, G. G. Duong, R. L. Davis"
+  publication: "Crowd-sourced Emotional Multimodal Actors Dataset (CREMA-D)"
+  extras: "Emotions: anger, disgust, fear, happy, neutral, sad; Size: 7442 files; License: Public Domain"
+
+- name: EMO2
+  link: http://example.com/emo2
+  paper: ""
+  subjects: 8
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Unknown, Format: Audio, 8 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
   talker_sex: ""
-  participant_population: "normal hearing"
-  authors: "Z. Lin, T. He, S. Cai, and H. Li"
-  publication: "Lin et al., Interspeech 2024"
-  extras: "HRTF-filtered through headphones"
+  participant_population: ""
+  authors: "Unknown"
+  publication: "EMO2 Dataset"
+  extras: "Emotions: anger, happiness, sadness, surprise, fear, disgust, neutral; Size: Unknown; License: Unknown"
+
+- name: IEMOCAP
+  link: https://sail.usc.edu/iemocap/index.html
+  paper: ""
+  subjects: 10
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio/Video, 12 hours, 10 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Shrikanth Narayanan, et al."
+  publication: "Interactive Emotional Dyadic Motion Capture Database (IEMOCAP)"
+  extras: "Emotions: angry, happy, sad, neutral, excitement, frustration, fear, surprise, disgust, other; Size: ~12000 files; License: Research use only"
+
+- name: MSP-IMPROV
+  link: https://www.utdallas.edu/~loizou/cimpl
+  paper: ""
+  subjects: 12
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio/Video, 12 actors, 8 sessions"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "University of Texas at Dallas"
+  publication: "MSP-IMPROV"
+  extras: "Emotions: angry, happy, sad, neutral, surprise, disgust, fear, contempt; Size: ~8 hours; License: Research use only"
+
+- name: MASC
+  link: https://github.com/emotiondataset/masc
+  paper: ""
+  subjects: 12
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Mandarin, Format: Audio, 12 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Emotion Dataset Group"
+  publication: "MASC Corpus"
+  extras: "Emotions: anger, disgust, fear, happiness, sadness, surprise, neutral; Size: 5400 files; License: Research use only"
+
+- name: ESD
+  link: https://github.com/HLTSingapore/ESD
+  paper: ""
+  subjects: 10
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Mandarin, Cantonese, Korean, and Japanese. 10 speakers"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "HLT Singapore"
+  publication: "ESD Corpus"
+  extras: "Emotions: angry, happy, neutral, sad, surprise; Size: 13125 files; License: Unknown"
+
+- name: Polish Emotional Speech Database (PESD)
+  link: http://www.db.psych.uw.edu.pl/peps.php
+  paper: ""
+  subjects: 8
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Polish, Format: Audio, 8 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Institute of Psychology, University of Warsaw"
+  publication: "PESD Dataset"
+  extras: "Emotions: anger, joy, fear, sadness, surprise, disgust, neutral; Size: 2240 files; License: Unknown"
+
+- name: MES-P
+  link: https://datashare.is.ed.ac.uk/handle/10283/2651
+  paper: ""
+  subjects: 16
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Mandarin, Format: Audio, 16 speakers"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: ""
+  participant_population: ""
+  authors: "Unknown"
+  publication: "MES-P: Mandarin Emotional Speech - Portrayed"
+  extras: "Emotions: happiness, anger, sadness, surprise, fear, disgust, neutral; Size: 2000 files; License: Free for research"
+
+- name: MES-N
+  link: https://datashare.is.ed.ac.uk/handle/10283/2651
+  paper: ""
+  subjects: 16
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Mandarin, Format: Audio, 16 speakers, natural speech"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: ""
+  participant_population: ""
+  authors: "Unknown"
+  publication: "MES-N: Mandarin Emotional Speech - Natural"
+  extras: "Emotions: happiness, anger, sadness, surprise, fear, disgust, neutral; Size: 1990 files; License: Free for research"
+
+- name: EmoReact
+  link: https://github.com/rhoposit/EmoReact
+  paper: ""
+  subjects: ""
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio, video reactions"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: ""
+  participant_population: ""
+  authors: "Unknown"
+  publication: "EmoReact"
+  extras: "Emotions: happiness, sadness, anger, surprise, disgust, fear, neutral; Size: 1100 files; License: Unknown"
+
+- name: DES
+  link: https://zenodo.org/record/1188976
+  paper: ""
+  subjects: 50
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Dutch, Format: Audio, 50 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "J. M. Goudbeek, E. A. Huis in 't Veld, and J. P. H. van den Bosch"
+  publication: "DES - Dutch Emotional Speech"
+  extras: "Emotions: anger, happiness, sadness, fear, surprise, disgust, neutral; Size: 5000 files; License: Unknown"
+
+- name: BAVED
+  link: https://zenodo.org/record/3269856
+  paper: ""
+  subjects: 12
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: English, Format: Audio, British Affective Voices"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "British Affective Voices"
+  publication: "BAVED Dataset"
+  extras: "Emotions: anger, fear, happiness, sadness, neutral; Size: 1152 files; License: CC BY 4.0"
+
+- name: TESS German
+  link: https://www.tessdatabank.com
+  paper: ""
+  subjects: 10
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: German, Format: Audio, 10 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: ""
+  participant_population: ""
+  authors: "Unknown"
+  publication: "TESS German Corpus"
+  extras: "Emotions: anger, disgust, fear, happy, pleasant surprise, sadness, neutral; Size: N/A; License: Research use only"
+
+- name: SU
+  link: https://susanepress.com/sudataset
+  paper: ""
+  subjects: 6
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Mandarin, Format: Audio, 6 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Suzhou University"
+  publication: "SU Mandarin Dataset"
+  extras: "Emotions: anger, happiness, sadness, surprise, fear, neutral; Size: 720 files; License: Free for research"
+
+- name: MESD
+  link: https://github.com/Bertrand-Benoit/mesd-dataset
+  paper: ""
+  subjects: 8
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: French, Format: Audio, 8 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Unknown"
+  publication: "MESD Dataset"
+  extras: "Emotions: anger, happiness, sadness, surprise, fear, disgust, neutral; Size: 560 files; License: Unknown"
+
+- name: Polish Emotional Speech Corpus (PESC)
+  link: https://pesc.polsl.pl/
+  paper: ""
+  subjects: 6
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Polish, Format: Audio, 6 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "Silesian University of Technology"
+  publication: "PESC Dataset"
+  extras: "Emotions: anger, joy, fear, sadness, surprise, disgust, neutral; Size: 1800 files; License: Unknown"
+
+- name: VAM
+  link: https://www.db-thueringen.de/receive/dbt_mods_00021952
+  paper: ""
+  subjects: 47
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: German, Format: Audio/Video, real TV broadcasts"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: "male, female"
+  participant_population: ""
+  authors: "University of Augsburg"
+  publication: "VAM Dataset"
+  extras: "Emotions: arousal, valence, dominance (continuous); Size: 946 files; License: Research only"
+
+- name: EMO2
+  link: http://example.com/emo2
+  paper: ""
+  subjects: 8
+  signals: Audio
+  neurorecording_system: ""
+  minutes: ""
+  stimulus_type: audio
+  stimuli_description: "Language: Unknown, Format: Audio, 8 actors"
+  tasks: [emotion_classification]
+  competing_talker_sex: ""
+  talker_sex: ""
+  participant_population: ""
+  authors: "Unknown"
+  publication: "EMO2 Dataset"
+  extras: "Emotions: anger, happiness, sadness, surprise, fear, disgust, neutral; Size: Unknown; License: Unknown"
