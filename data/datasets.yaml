@@ -3,19 +3,36 @@
 #          stimulus_type, stimuli_description, tasks, competing_talker_sex,
 #          talker_sex, participant_population, authors, publication, extras
 
+- name: Open iEEG-fMRI dataset
+  link: https://braintreebank.dev/
+  paper: "https://openneuro.org/datasets/ds003688/versions/1.0.6"
+  subjects: 51 
+  signals: iEEG + Respiration + HR + EOG
+  neurorecording_system: "iEEG 4865 electrodes"
+  minutes: 258
+  stimulus_type: audiovisual
+  stimuli_description: "Short audiovisual film"
+  tasks: [naturalistic_viewing]
+  competing_talker_sex: ""
+  talker_sex: ""
+  participant_population: "patients"
+  authors: "J. Berezutskaya et al."
+  publication: "J. Berezutskaya. *scientific data* 2022"
+  extras: "audio and video annotations"
+  
 - name: Brain Treebank
   link: https://braintreebank.dev/
   paper: "https://arxiv.org/abs/2411.08343"
   subjects: 10 
   signals: iEEG
-  neurorecording_system: "iEEG 168 electrodes"
+  neurorecording_system: "iEEG 1688 electrodes"
   minutes: 258
   stimulus_type: audiovisual
   stimuli_description: "Hollywood movies"
-  tasks: [attention_decoding, multi_speaker]
+  tasks: [naturalistic_viewing]
   competing_talker_sex: ""
   talker_sex: ""
-  participant_population: "young normal/hearing adults"
+  participant_population: "patients"
   authors: "C. Wang et al."
   publication: "C. Wang et al. *arXiv*"
   extras: "Trancription, word onset, etc."
