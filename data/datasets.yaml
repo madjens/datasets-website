@@ -9,7 +9,7 @@
   subjects: 51 
   signals: iEEG + Respiration + HR + EOG
   neurorecording_system: "iEEG 4865 electrodes"
-  minutes: 258
+  minutes: 6.5
   stimulus_type: audiovisual
   stimuli_description: "Short audiovisual film"
   tasks: [naturalistic_viewing]
