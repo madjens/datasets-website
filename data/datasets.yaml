@@ -3,6 +3,23 @@
 #          stimulus_type, stimuli_description, tasks, competing_talker_sex,
 #          talker_sex, participant_population, authors, publication, extras
 
+- name: Brain Treebank
+  link: https://braintreebank.dev/
+  paper: "https://arxiv.org/abs/2411.08343"
+  subjects: 10 
+  signals: iEEG
+  neurorecording_system: "iEEG 168 electrodes"
+  minutes: 258
+  stimulus_type: audiovisual
+  stimuli_description: "Hollywood movies"
+  tasks: [attention_decoding, multi_speaker]
+  competing_talker_sex: ""
+  talker_sex: ""
+  participant_population: "young normal/hearing adults"
+  authors: "C. Wang et al."
+  publication: "C. Wang et al. *arXiv*"
+  extras: "Trancription, word onset, etc."
+  
 - name: Fuglsang AAD
   link: https://zenodo.org/record/1199011
   paper: ""
