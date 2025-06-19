@@ -27,7 +27,7 @@
   signals: EEG
   neurorecording_system: "EEG 64-channel BioSemi (+4 EOG)"
   minutes: 80
-  stimulus_type: audio-visual
+  stimulus_type: audiovisual
   stimuli_description: "Dutch science-outreach podcasts with various audio-visual and gaze conditions; spatial attention switch after 5 min per trial"
   tasks: [attention_decoding, gaze_control]
   competing_talker_sex: "male-male"
