@@ -2,6 +2,158 @@
 # Columns: name, link, subjects, signals, neurorecording_system, minutes,
 #          stimulus_type, stimuli_description, tasks, competing_talker_sex,
 #          talker_sex, participant_population, authors, publication, extras
+- name: EEG Speech-in-Noise (Etard & Reichenbach)
+  link: https://zenodo.org/records/7778289
+  paper: https://www.jneurosci.org/content/39/29/5750
+  subjects: 12
+  signals: EEG
+  neurorecording_system: "EEG 64-channel actiCAP"
+  minutes: 40
+  stimulus_type: audio
+  stimuli_description: "English audiobooks in four levels of babble noise; also includes Dutch listening conditions (very low comprehension)."
+  tasks: [speech_in_noise, neural_speech_tracking, clarity_decoding, comprehension_decoding]
+  competing_talker_sex: ""
+  talker_sex: "male and female"
+  participant_population: "young, normal-hearing"
+  authors: "O. Etard, T. Reichenbach"
+  publication: "Etard et al., Journal of Neuroscience, 2019"
+  extras: "EEG in English (clean + 3 noise levels) and Dutch (very low comprehension); word- and sentence-level timing files; HDF5 format; CC0 license; see also associated attention decoding publication"
+
+- name: MOUS
+  link: https://data.donders.ru.nl/collections/di/dccn/DSC_3011020.09_236?0
+  paper: https://www.sciencedirect.com/science/article/pii/S096098221831409X
+  subjects: 204
+  signals: MEG
+  neurorecording_system: "MEG 275-channel (CTF)"
+  minutes: 8.4
+  stimulus_type: audio
+  stimuli_description: "Dutch sentences (120 sentences × 2.8–6 s); listening task; scrambled and normal sentences"
+  tasks: [oscillatory_entrainment, language_comprehension, sentence_processing, lateralisation, resting_state]
+  competing_talker_sex: ""
+  talker_sex: "female"
+  participant_population: "young, healthy"
+  authors: "N. H. L. Lam, A. Hultén, P. Hagoort, J.-M. Schoffelen"
+  publication: "Lam et al., Language, Cognition and Neuroscience, 2018"
+  extras: "MEG/fMRI/structural, also includes reading, resting-state, fMRI available for all"
+
+- name: EEG Alice in Wonderland (Brennan)
+  link: https://deepblue.lib.umich.edu/data/concern/data_sets/bg257f92t
+  paper: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0207741
+  subjects: 49
+  signals: EEG
+  neurorecording_system: "EEG 61-channel actiCAP (Brain Products actiCHamp)"
+  minutes: 12.4
+  stimulus_type: audio
+  stimuli_description: "English audiobook ('Alice in Wonderland' chapter 1); passive listening; includes stimulus wav files and aligned word-by-word linguistic annotations"
+  tasks: [linguistic_prediction, surprisal_tracking, continuous_speech_comprehension]
+  competing_talker_sex: ""
+  talker_sex: "female"
+  participant_population: "young"
+  authors: "J. R. Brennan, J. T. Hale"
+  publication: "Brennan et al., PLoS ONE, 2019"
+  extras: "Comprehension scores, word-by-word surprisal annotations"
+
+- name: SparrKULee (KU Leuven)
+  link: https://rdr.kuleuven.be/dataset.xhtml?persistentId=doi:10.48804/K3VSND
+  paper: ""
+  subjects: 85
+  signals: EEG
+  neurorecording_system: "EEG 64-channel BioSemi"
+  minutes: 130-150
+  stimulus_type: audio
+  stimuli_description: "Flemish audiobooks and podcasts; 8–10 trials of ~15 min; natural speech listening"
+  tasks: [speech_decoding, speech_encoding, match_mismatch, machine_learning]
+  competing_talker_sex: ""
+  talker_sex: "male and female"
+  participant_population: "young, normal-hearing"
+  authors: "L. Bollens, B. Accou, H. Van hamme, T. Francart"
+  publication: "Bollens et al., KU Leuven RDR, 2023"
+  extras: "Code for preprocessing and validation. "
+
+- name: EEG Hearing Aid Speech (Vanheusden)
+  link: https://eprints.soton.ac.uk/438737/
+  paper: https://www.frontiersin.org/articles/10.3389/fnhum.2020.00109/full
+  subjects: 17
+  signals: EEG
+  neurorecording_system: "EEG 32-channel BioSemi"
+  minutes: 25
+  stimulus_type: audio
+  stimuli_description: "English audiobook; 8 trials of ~3 min each; aided and unaided hearing aid conditions"
+  tasks: [cortical_entrainment, hearing_aid, speech_comprehension]
+  competing_talker_sex: ""
+  talker_sex: "female"
+  participant_population: "older, hearing-impaired, hearing aid users"
+  authors: "F. J. Vanheusden, et al."
+  publication: "Vanheusden et al., Frontiers in Human Neuroscience, 2020"
+  extras: "Dataset behavioral results, questionnaires; "
+
+- name: EEG Surprisal (Reichenbach)
+  link: https://figshare.com/articles/dataset/EEG_recordings_and_stimuli/9033983/1
+  paper: https://www.mitpressjournals.org/doi/10.1162/jocn_a_01467
+  subjects: 13
+  signals: EEG
+  neurorecording_system: "EEG 64-channel actiCAP"
+  minutes: 40
+  stimulus_type: audio
+  stimuli_description: "English short stories; 15 trials of ~2.6 min each; narrative listening"
+  tasks: [semantic_decoding, surprisal_tracking, continuous_speech_comprehension]
+  competing_talker_sex: ""
+  talker_sex: "male"
+  participant_population: "young, normal-hearing"
+  authors: "H. Weissbart, et al."
+  publication: "Weissbart et al., Journal of Cognitive Neuroscience, 2020"
+  extras: "Preprocessed EEG for all subjects; word-level stimulus alignment; sample code for temporal response functions; all data in .mat format"
+
+- name: MEG Natural Speech (Simon)
+  link: https://drum.lib.umd.edu/items/6ce1b090-3446-46d8-9582-f689afcd23de
+  paper: https://doi.org/10.1016/j.cub.2018.10.042
+  subjects: 26
+  signals: MEG
+  neurorecording_system: "MEG 157-channel"
+  minutes: 8
+  stimulus_type: audio
+  stimuli_description: "English audiobooks; 8 trials of 1 minute each; natural narrative speech"
+  tasks: [semantic_decoding, surprisal_tracking, continuous_speech_comprehension]
+  competing_talker_sex: ""
+  talker_sex: "male and female"
+  participant_population: "normal-hearing"
+  authors: "C. Brodbeck, L. E. Hong, J. Z. Simon"
+  publication: "Brodbeck et al., Current Biology, 2018"
+  extras: "Includes preprocessed MEG data for all subjects, task: narrative listening, additional documentation files"
+
+- name: EEG Natural Narrative Speech (Lalor)
+  link: https://datadryad.org/stash/dataset/doi:10.5061/dryad.070jc
+  paper: https://www.cell.com/current-biology/pdf/S0960-9822(18)30132-9.pdf
+  subjects: 19
+  signals: EEG
+  neurorecording_system: "EEG 128-channel BioSemi"
+  minutes: 60
+  stimulus_type: audio
+  stimuli_description: "English fictional stories; includes Cocktail Party, N400, Natural Speech, Reverse Speech, and Speech-in-Noise paradigms"
+  tasks: [semantic_decoding, attention_decoding, phoneme_decoding, speech_in_noise]
+  competing_talker_sex: ""
+  talker_sex: "male"
+  participant_population: "young, normal-hearing"
+  authors: "M. P. Broderick, et al."
+  publication: "Broderick et al., Current Biology, 2018"
+  extras: "Paradigms: semantic dissimilarity, cocktail party attention, time-reversed speech, speech in noise, and N400;)"
+
+- name: SEED (SJTU)
+  link: https://bcmi.sjtu.edu.cn/~seed/seed.html
+  paper: https://ieeexplore.ieee.org/document/7103007  # Zheng & Lu, IEEE TAMD 2015
+  subjects: 15
+  signals: EEG + Eye-tracking
+  neurorecording_system: "EEG 62-channel ESI NeuroScan System; SMI eye-tracking glasses"
+  minutes: "180"  # 15 trials x 4min x 3 sessions = 180 min per subject
+  stimulus_type: audiovisual
+  stimuli_description: "15 Chinese film clips (positive, neutral, negative emotions), ~4 min each, 3 sessions per subject"
+  tasks: [emotion_classification, multimodal_decoding]
+  competing_talker_sex: ""
+  talker_sex: ""
+  participant_population: "Chinese adults (7 males, 8 females, mean age 23.3 ± 2.4 yrs)"
+  authors: "Wei-Long Zheng, Ruo-Nan Duan, Jia-Yi Zhu, Bao-Liang Lu"
+  publication: "Wei-Long Zheng et al. 2015 and Ruo-Nan Duan et al. 2013"
+  extras: "Emotions labeled per clip (positive/neutral/negative); Preprocessed and feature-level data"
 
 - name: Open iEEG-fMRI dataset
   link: https://braintreebank.dev/
@@ -17,7 +169,7 @@
   talker_sex: ""
   participant_population: "patients"
   authors: "J. Berezutskaya et al."
-  publication: "J. Berezutskaya. *scientific data* 2022"
+  publication: "J. Berezutskaya. scientific data 2022"
   extras: "audio and video annotations"
   
 - name: Brain Treebank
@@ -34,7 +186,7 @@
   talker_sex: ""
   participant_population: "patients"
   authors: "C. Wang et al."
-  publication: "C. Wang et al. *arXiv*"
+  publication: "C. Wang et al. arXiv, 2024"
   extras: "Trancription, word onset, etc."
   
 - name: Fuglsang AAD
@@ -42,92 +194,92 @@
   paper: ""
   subjects: 18
   signals: EEG
-  neurorecording_system: "EEG 64‑channel BioSemi"
+  neurorecording_system: "EEG 64-channel BioSemi"
   minutes: 20
   stimulus_type: audio
-  stimuli_description: "Two competing Danish storytellers (24 × 50‑s trials)"
+  stimuli_description: "Two competing Danish storytellers (24 × 50-s trials)"
   tasks: [attention_decoding, multi_speaker]
-  competing_talker_sex: "male‑male"
+  competing_talker_sex: "male-male"
   talker_sex: "male"
-  participant_population: "young normal‑hearing adults"
-  authors: "R. Fuglsang, G. Hjortkjær, J. A. O’Sullivan, et al."
-  publication: "Fuglsang et al., *JASA* 2020"
-  extras: "Room acoustics, attended‑speaker labels"
+  participant_population: "young normal-hearing adults"
+  authors: "R. Fuglsang, G. Hjortkjær, J. A. O’Sullivan, et al."
+  publication: "Fuglsang et al., JASA, 2020"
+  extras: "Room acoustics, attended-speaker labels"
 
 - name: KU Leuven AAD v2
   link: https://zenodo.org/record/4004271
   paper: ""
   subjects: 16
   signals: EEG
-  neurorecording_system: "EEG 64‑channel BioSemi"
+  neurorecording_system: "EEG 64-channel BioSemi"
   minutes: 72
   stimulus_type: audio
-  stimuli_description: "Dutch 6‑min story pairs, dichotic vs HRTF"
+  stimuli_description: "Dutch 6-min story pairs, dichotic vs HRTF"
   tasks: [attention_decoding, audiovisual_aad, multi_speaker]
-  competing_talker_sex: "male‑female"
+  competing_talker_sex: "male-female"
   talker_sex: "male, female"
-  participant_population: "young normal‑hearing"
-  authors: "B. Das, R. Biesmans, et al."
-  publication: "Das et al., *IEEE TBME* 2020"
-  extras: "Ear‑of‑attention, gaze condition"
+  participant_population: "young normal-hearing"
+  authors: "B. Das, R. Biesmans, et al."
+  publication: "Das et al., IEEE TBME, 2020"
+  extras: "Ear-of-attention, gaze condition"
 
-- name: MEG‑MASC
+- name: MEG-MASC
   link: https://osf.io/ag3kj/
-  paper: ""
+  paper: https://www.nature.com/articles/s41467-022-34354-2
   subjects: 27
   signals: MEG
-  neurorecording_system: "208‑sensor Yokogawa MEG"
-  minutes: 240
+  neurorecording_system: "208-channel Yokogawa MEG"
+  minutes: 120
   stimulus_type: audio
-  stimuli_description: "English synthetic‑voice stories (~1 h ×2 sessions)"
-  tasks: [semantic_decoding, single_speaker]
+  stimuli_description: "English synthetic-voice stories; natural narrative listening; 2 sessions × 1 hour"
+  tasks: [phoneme_decoding, position_invariant_encoding, semantic_decoding, single_speaker]
   competing_talker_sex: ""
   talker_sex: "synthetic"
-  participant_population: "young normal‑hearing"
-  authors: "Author list"
-  publication: "—"
-  extras: "Word & phoneme onsets, comprehension Qs"
+  participant_population: "young, normal-hearing"
+  authors: "L. Gwilliams, J.-R. King, A. Marantz, D. Poeppel"
+  publication: "Gwilliams et al., Nature Communications, 2022"
+  extras: "Word & phoneme onsets, comprehension questions"
 
 - name: LibriBrain
   link: https://arxiv.org/abs/2506.02098
   paper: ""
   subjects: 1
   signals: MEG
-  neurorecording_system: "306‑channel Elekta Neuromag"
+  neurorecording_system: "306-channel Elekta Neuromag"
   minutes: 3000
   stimulus_type: audio
-  stimuli_description: "Sherlock Holmes audiobooks (50 h)"
+  stimuli_description: "Sherlock Holmes audiobooks (50 h)"
   tasks: [speech_recognition, phoneme_classification, single_speaker]
   competing_talker_sex: ""
   talker_sex: "male"
   participant_population: "single participant"
-  authors: "L. Smith, A. Johnson, et al."
-  publication: "Smith & Johnson, *bioRxiv* 2025"
+  authors: "L. Smith, A. Johnson, et al."
+  publication: "Smith & Johnson, bioRxiv, 2025"
   extras: "Train/val/test splits, loaders"
 
-- name: Ershaid CT‑Noise
+- name: Ershaid CT-Noise
   link: https://osf.io/asn2k/
   paper: ""
   subjects: 49
   signals: EEG + Pupil
-  neurorecording_system: "EEG 64‑channel BioSemi + EyeLink"
+  neurorecording_system: "EEG 64-channel BioSemi + EyeLink"
   minutes: 30
   stimulus_type: audio
   stimuli_description: "Sentences in quiet, babble or reverberation noise"
   tasks: [listening_effort_decoding, single_speaker]
   competing_talker_sex: ""
   talker_sex: "female"
-  participant_population: "Spanish native, normal‑hearing"
-  authors: "E. Ershaid, J. Zaar, et al."
-  publication: "Ershaid et al., *NeuroImage* 2021"
+  participant_population: "Spanish native, normal-hearing"
+  authors: "E. Ershaid, J. Zaar, et al."
+  publication: "Ershaid et al., NeuroImage, 2021"
   extras: "SNR levels, literacy, effort ratings"
 
-- name: ERP‑CORE N400
+- name: ERP-CORE N400
   link: https://osf.io/thsqg/
   paper: ""
   subjects: 40
   signals: EEG
-  neurorecording_system: "EEG 64‑channel BioSemi"
+  neurorecording_system: "EEG 64-channel BioSemi"
   minutes: 25
   stimulus_type: visual
   stimuli_description: "Prime–target word pairs (semantic relatedness)"
@@ -135,8 +287,8 @@
   competing_talker_sex: ""
   talker_sex: ""
   participant_population: "neurotypical adults"
-  authors: "A. Kappenman, E. Luck, et al."
-  publication: "Kappenman et al., *Psychophysiology* 2021"
+  authors: "A. Kappenman, E. Luck, et al."
+  publication: "Kappenman et al., Psychophysiology, 2021"
   extras: "Six standard ERP tasks"
 
 - name: DEAP
@@ -144,16 +296,16 @@
   paper: ""
   subjects: 32
   signals: EEG + HR + GSR + EMG
-  neurorecording_system: "EEG 32‑channel BioSemi + peripherals"
+  neurorecording_system: "EEG 32-channel BioSemi + peripherals"
   minutes: 40
   stimulus_type: audiovisual
-  stimuli_description: "40 one‑minute music videos"
+  stimuli_description: "40 one-minute music videos"
   tasks: [emotion_classification, music]
   competing_talker_sex: ""
   talker_sex: "mixed"
   participant_population: "young adults"
-  authors: "S. Koelstra, C. Muhl, et al."
-  publication: "Koelstra et al., *IEEE Trans. Affective Computing* 2012"
+  authors: "S. Koelstra, C. Muhl, et al."
+  publication: "Koelstra et al., IEEE Trans. Affective Computing 2012"
   extras: "Valence & arousal ratings 1–9"
 
 - name: Child fNIRS AIW
@@ -161,137 +313,171 @@
   paper: ""
   subjects: 51
   signals: fNIRS
-  neurorecording_system: "46‑channel fNIRS system"
+  neurorecording_system: "46-channel fNIRS system"
   minutes: 12
   stimulus_type: audio
-  stimuli_description: "Chapter 1 of *Alice in Wonderland*"
+  stimuli_description: "Chapter 1 of Alice in Wonderland"
   tasks: [story_comprehension, theory_of_mind, single_speaker]
   competing_talker_sex: ""
   talker_sex: "female"
-  participant_population: "children 6–12 y"
+  participant_population: "children 6–12 y"
   authors: "Author list"
   publication: "—"
-  extras: "Word‑level surprisal, ToM & emotion labels"
+  extras: "Word-level surprisal, ToM & emotion labels"
 
-# --- Music‑specific datasets (not previously included) ---
-- name: Sturm 2015 NatMusic
+# --- Music-specific datasets (not previously included) ---
+- name: NatMusic (Sturm2015)
   link: https://figshare.com/articles/dataset/NatMusic/1553234
-  paper: ""
-  subjects: 20
+  paper: https://www.frontiersin.org/articles/10.3389/fnins.2015.00268/full
+  subjects: 9
   signals: EEG
-  neurorecording_system: "EEG 128‑channel EGI"
+  neurorecording_system: "EEG 128-channel EGI"
   minutes: 60
   stimulus_type: music
-  stimuli_description: "Natural music listening (classical & jazz)"
-  tasks: [music, attention_decoding]
-  competing_talker_sex: ""
-  talker_sex: "instrumental"
-  participant_population: "musicians & non‑musicians"
-  authors: "I. Sturm, et al."
-  publication: "Sturm et al., *Frontiers in Neuroscience* 2015"
-  extras: "EEG‑fMRI concurrent"
-
-- name: Cantisani 2019 Concert AAD
-  link: https://zenodo.org/record/4537751
-  paper: ""
-  subjects: 17
-  signals: EEG
-  neurorecording_system: "EEG 64‑channel BioSemi"
-  minutes: 45
-  stimulus_type: music
-  stimuli_description: "Live concert with multiple instruments"
-  tasks: [music, attention_decoding]
-  competing_talker_sex: ""
-  talker_sex: "instrumental"
-  participant_population: "young adults"
-  authors: "C. Cantisani, et al."
-  publication: "Cantisani et al., *Scientific Reports* 2021"
-  extras: "EEG recorded in ecological concert hall"
-
-- name: Di Liberto 2021 Music Attention
-  link: https://datadryad.org/stash/dataset/doi:10.5061/dryad.g1jwstqmh
-  paper: ""
-  subjects: 19
-  signals: EEG
-  neurorecording_system: "EEG 64‑channel BioSemi"
-  minutes: 35
-  stimulus_type: music
-  stimuli_description: "Polyphonic music attention task"
-  tasks: [music, attention_decoding]
-  competing_talker_sex: ""
-  talker_sex: "instrumental"
-  participant_population: "normal‑hearing adults"
-  authors: "G. M. Di Liberto, et al."
-  publication: "Di Liberto et al., *J. Neurophysiology* 2021"
-  extras: "Score‑aligned note onsets"
-
-- name: Marion 2021 Music Envelope
-  link: https://datadryad.org/stash/dataset/doi:10.5061/dryad.dbrv15f0j
-  paper: ""
-  subjects: 30
-  signals: EEG
-  neurorecording_system: "EEG 64‑channel BioSemi"
-  minutes: 60
-  stimulus_type: music
-  stimuli_description: "Entrainment to musical envelope (pop songs)"
-  tasks: [music, envelope_tracking]
-  competing_talker_sex: ""
-  talker_sex: "instrumental + vocals"
-  participant_population: "young adults"
-  authors: "G. Marion, et al."
-  publication: "Marion et al., *NeuroImage* 2021"
-  extras: "Behavioral tapping responses"
-
-- name: Étard 2020 Chorus AAD
-  link: https://zenodo.org/record/4470135
-  paper: ""
-  subjects: 23
-  signals: EEG
-  neurorecording_system: "EEG 64-channel BioSemi"
-  minutes: 50
-  stimulus_type: music
-  stimuli_description: "Choir with spatialized singers (male & female)"
-  tasks: [music, attention_decoding, multi_speaker]
-  competing_talker_sex: "mixed"
-  talker_sex: "mixed"
-  participant_population: "normal-hearing adults"
-  authors: "N. Étard, T. Lalor"
-  publication: "Étard & Lalor, *eLife* 2020"
-  extras: "Spatial attention cues"
-
-- name: Kaneshiro 2016 Song Familiarity
-  link: https://purl.stanford.edu/sd922db3535
-  paper: ""
-  subjects: 20
-  signals: EEG
-  neurorecording_system: "EEG 128-channel BioSemi"
-  minutes: 80
-  stimulus_type: music
-  stimuli_description: "Pop songs of varying familiarity"
-  tasks: [music, familiarity_classification]
-  competing_talker_sex: ""
-  talker_sex: "instrumental + vocals"
-  participant_population: "young adults"
-  authors: "B. Kaneshiro, S. R. Kim, et al."
-  publication: "Kaneshiro et al., *Scientific Reports* 2021"
-  extras: "ISC and behavioral ratings"
-
-- name: Narayanan 2022 Bach Inventions
-  link: https://zenodo.org/record/4518754
-  paper: ""
-  subjects: 30
-  signals: EEG
-  neurorecording_system: "EEG 255-channel SynAmps RT"
-  minutes: 40
-  stimulus_type: music
-  stimuli_description: "Bach Two-Part Inventions (cocktail-piano mixture)"
-  tasks: [music, attention_decoding]
+  stimuli_description: "Natural music (classical and orchestral); includes Vivaldi, Chopin, Bach, Rachmaninov, Williams, and non-musical stimuli"
+  tasks: [music_listening, tension_rating]
   competing_talker_sex: ""
   talker_sex: "instrumental"
   participant_population: "musicians & non-musicians"
-  authors: "P. Narayanan, et al."
-  publication: "Narayanan et al., *PLoS Biology* 2022"
-  extras: "Piano knock-out auditory scene"
+  authors: "I. Sturm"
+  publication: "Sturm, Frontiers in Neuroscience, 2015"
+  extras: "EEG from 9 subjects; separate tension ratings from 14 subjects; commercial recordings;"
+
+- name: MAD-EEG
+  link: https://zenodo.org/record/4537751
+  paper: https://www.isca-archive.org/smm_2019/cantisani19_smm.html
+  subjects: 8
+  signals: EEG
+  neurorecording_system: "EEG 20-channel B-Alert X24 headset"
+  minutes: 30
+  stimulus_type: music
+  stimuli_description: "Polyphonic music mixture (solos, duos, trios); subjects attended to a target instrument in the mix"
+  tasks: [music_attention_decoding, instrument_decoding, polyphonic_music]
+  competing_talker_sex: ""
+  talker_sex: "various instruments"
+  participant_population: "young, non-professional musicians"
+  authors: "G. Cantisani, G. Trégoat, S. Essid, G. Richard"
+  publication: "Cantisani et al., Proc. SMM19, 2019"
+  extras: "Stimuli played over loudspeakers (not headphones); single-trial EEG attention decoding; solos, duets, trios; variations in instrument, genre, melody; open access"
+
+- name: DiliBach
+  link: https://datadryad.org/stash/dataset/doi:10.5061/dryad.g1jwstqmh
+  paper: https://elifesciences.org/articles/51784
+  subjects: 20
+  signals: EEG
+  neurorecording_system: "EEG 64-channel BioSemi"
+  minutes: ~40
+  stimulus_type: music
+  stimuli_description: "Monophonic piano music: 10 Bach violin and flute pieces (MIDI, piano timbre)"
+  tasks: [music, melodic_expectation, attention_decoding]
+  competing_talker_sex: ""
+  talker_sex: "instrumental"
+  participant_population: "adults (10 non-musicians, 10 pianists), normal hearing"
+  authors: "G. M. Di Liberto, C. Pelofi, R. Bianco, P. Patel, A. D. Mehta, J. L. Herrero, A. de Cheveigné, S. Shamma, N. Mesgarani"
+  publication: "Di Liberto et al., eLife, 2020"
+  extras: "Score-aligned note onsets, CND data format, MIDI and EEG data available, original MIDI: Bach sonatas/partitas"
+
+- name: Marion Music Imagery
+  link: https://datadryad.org/stash/dataset/doi:10.5061/dryad.dbrv15f0j
+  paper: https://www.jneurosci.org/content/41/35/7435
+  subjects: 21
+  signals: EEG
+  neurorecording_system: "EEG 64-channel BioSemi"
+  minutes: 45
+  stimulus_type: music
+  stimuli_description: "EEG from professional musicians during both listening to and imagining four Bach chorales (monophonic melodies, 88 trials: 44 listening, 44 imagery)."
+  tasks: [music, melodic_imagery, envelope_tracking]
+  competing_talker_sex: ""
+  talker_sex: "instrumental"
+  participant_population: "professional musicians"
+  authors: "G. Marion, et al."
+  publication: "Marion et al., Journal of Neuroscience, 2021"
+  extras: "Includes listening and imagery conditions, score-aligned note onsets, original stimuli, and readme."
+
+- name: EEG Polyphonic Music (Etard)
+  link: https://zenodo.org/record/4470135
+  paper: https://doi.org/10.1162/jocn_a_01811
+  subjects: 17
+  signals: EEG (3-channel bipolar)
+  neurorecording_system: "EEG bipolar montage"
+  minutes: 22
+  stimulus_type: music
+  stimuli_description: "Bach's Two-Part Inventions performed on piano and guitar; subjects attended to one instrument in polyphonic mixtures and detected vibrato."
+  tasks: [music, attention_decoding, polyphonic_music]
+  competing_talker_sex: ""
+  talker_sex: "instrumental"
+  participant_population: "young, normal-hearing adults"
+  authors: "O. Etard, et al."
+  publication: "Etard et al., Journal of Cognitive Neuroscience, 2022"
+  extras: "Vibrato detection task; both solo and competing-instrument (duo) conditions; full analysis code provided."
+
+- name: NMED-H
+  link: https://purl.stanford.edu/sd922db3535
+  paper: https://www.sciencedirect.com/science/article/pii/S1053811920307973
+  subjects: 48
+  signals: EEG
+  neurorecording_system: "EEG 128-channel EGI"
+  minutes: ~45
+  stimulus_type: music
+  stimuli_description: "Hindi pop songs, intact and scrambled, presented in four experimental conditions"
+  tasks: [music, naturalistic_listening]
+  competing_talker_sex: ""
+  talker_sex: "instrumental + vocals"
+  participant_population: "adults (12 per song), mixed familiarity"
+  authors: "B. Kaneshiro, et al."
+  publication: "Kaneshiro et al., NeuroImage, 2020"
+  extras: "Includes raw, clean, and spatially filtered EEG, behavioral responses, and participant-stimulus assignment; ISC analysis."
+
+- name: NMED-T
+  link: https://purl.stanford.edu/jn859kj8079
+  paper: https://ismir2017.smcnus.org/wp-content/uploads/2017/10/198_Paper.pdf
+  subjects: 20
+  signals: EEG
+  neurorecording_system: "Dense-array EEG"
+  minutes: ~60
+  stimulus_type: music
+  stimuli_description: "Full-length songs with electronically produced beats at various tempos; participants rated familiarity and enjoyment and tapped to the beat."
+  tasks: [music, beat_processing, familiarity_rating, enjoyment_rating, sensorimotor_synchronization]
+  competing_talker_sex: ""
+  talker_sex: "instrumental + vocals"
+  participant_population: "adults"
+  authors: "S. Losorelli, D. T. Nguyen, J. P. Dmochowski, B. Kaneshiro"
+  publication: "Losorelli et al., Proc. ISMIR, 2017"
+  extras: "EEG (raw/cleaned), tapping data, ratings, and demographics. Matlab scripts included. Audio metadata links."
+
+- name: NMED-M (Minimalism) Music EEG
+  link: https://purl.stanford.edu/kt396gb0630
+  paper: https://www.biorxiv.org/content/10.1101/2021.04.27.441708v2
+  subjects: 30
+  signals: EEG
+  neurorecording_system: "Dense-array EEG"
+  minutes: ~30
+  stimulus_type: music
+  stimuli_description: "Five musical stimuli: Steve Reich’s Piano Phase (original and remix), and three manipulations (Abrupt Change, Segment Shuffle, Tremolo)."
+  tasks: [music, engagement_rating, continuous_behavior, stimulus_manipulation]
+  competing_talker_sex: ""
+  talker_sex: "instrumental"
+  participant_population: "adults"
+  authors: "T. Dauer, D. T. Nguyen, N. Gang, J. P. Dmochowski, J. Berger, B. Kaneshiro"
+  publication: "Dauer et al., bioRxiv, 2021"
+  extras: "Continuous engagement ratings; ratings of pleasantness, musicality, order, interest, engagement; cleaned/aggregated EEG; raw/cleaned behavioral responses."
+
+- name: EEG-AAD (KU Leuven)
+  link: https://zenodo.org/record/4518754
+  paper: https://iopscience.iop.org/article/10.1088/1741-2552/ac2629
+  subjects: 30
+  signals: EEG
+  neurorecording_system: "EEG 255-channel SynAmps RT"
+  minutes: 24
+  stimulus_type: audio
+  stimuli_description: "Dutch short stories; two male speakers; dichotic HRTF-filtered spatial separation (left/right)."
+  tasks: [attention_decoding, multi_speaker]
+  competing_talker_sex: "male-male"
+  talker_sex: "male"
+  participant_population: "young, normal-hearing males"
+  authors: "A. M. Narayanan, R. Zink, A. Bertrand"
+  publication: "Narayanan et al., Journal of Neural Engineering, 2021"
+  extras: "Ultra-high-density EEG; 4 trials × 6 min; MATLAB/Python code provided; channel locations; original stimuli included."
 
 - name: The Brain, Body, and Behaviour Dataset
   link: https://bbbd.pythonanywhere.com/
@@ -307,10 +493,10 @@
   talker_sex: "mixed"
   participant_population: "young normal-hearing"
   authors: "J. Madsen, et al."
-  publication: "Madsen et al., *bioRxiv* 2025"
+  publication: "Madsen et al., bioRxiv, 2025"
   extras: "Memory questions, ASRS, DigitSpan"
   
-- name: Biesmans 2017
+- name: KU Leuven AAD (Biesmans 2017)
   link: https://zenodo.org/record/4004271
   paper: https://ieeexplore.ieee.org/document/7891541
   subjects: 16
@@ -321,62 +507,28 @@
   stimuli_description: "Dutch short stories"
   tasks: [attention_decoding, multi_speaker]
   competing_talker_sex: "male-male"
-  talker_sex: ""
-  participant_population: "young, normal hearing"
-  authors: "W. Biesmans, N. Das, T. Francart, and A. Bertrand"
-  publication: "Biesmans et al., IEEE Trans. Neural Syst. Rehabil. Eng. 2017"
-  extras: "8 trials x 6 min + 12 trials x 2 min, dichotic and HRTF-filtered in anechoic room"
+  talker_sex: "male"
+  participant_population: "young, normal-hearing adults"
+  authors: "W. Biesmans, N. Das, T. Francart, A. Bertrand"
+  publication: "Biesmans et al., IEEE Trans. Neural Syst. Rehabil. Eng., 2017"
+  extras: "8 trials × 6 min, 12 trials × 2 min (repetitions); attention alternates between left/right ear; includes HRTF and dichotic conditions; see dataset docs for cross-validation caveats."
 
 - name: Fuglsang 2017
   link: https://zenodo.org/record/1199011
-  paper: https://www.sciencedirect.com/science/article/pii/S1053811917305804
+  paper: https://www.sciencedirect.com/science/article/pii/S105381191730318X
   subjects: 18
-  signals: EEG
+  signals: EEG + EOG
   neurorecording_system: "EEG 64-channel BioSemi"
   minutes: 50
   stimulus_type: audio
-  stimuli_description: "Danish fictional stories"
+  stimuli_description: "Danish fictional stories (male and female speakers); two-talker mixtures with spatial separation, in simulated anechoic and reverberant rooms."
   tasks: [attention_decoding, multi_speaker]
   competing_talker_sex: "male-female"
-  talker_sex: ""
-  participant_population: "young, normal hearing"
-  authors: "S. A. Fuglsang, T. Dau, and J. Hjortkjær"
+  talker_sex: "male, female"
+  participant_population: "young, normal-hearing adults"
+  authors: "S. A. Fuglsang, T. Dau, J. Hjortkjær"
   publication: "Fuglsang et al., NeuroImage, 2017"
-  extras: "60 trials x 50s, HRTF-filtered in various reverberant rooms, EOG available"
-
-- name: Fuglsang 2020 HL
-  link: https://zenodo.org/record/1199011
-  paper: https://www.jneurosci.org/content/40/12/2562
-  subjects: 44
-  signals: EEG
-  neurorecording_system: "EEG 64-channel BioSemi"
-  minutes: 27
-  stimulus_type: audio
-  stimuli_description: "Danish audiobooks"
-  tasks: [attention_decoding, multi_speaker]
-  competing_talker_sex: "male-female"
-  talker_sex: ""
-  participant_population: "22 hearing impaired + 22 normal hearing"
-  authors: "S. A. Fuglsang, J. Märcher-Rørsted, T. Dau, J. Hjortkjær"
-  publication: "Fuglsang et al., J. Neurosci. 2020"
-  extras: "in-ear EEG for 19/44, audiograms, behavioral data, EOG available"
-
-- name: Power 2012
-  link: https://datashare.ed.ac.uk/handle/10283/843
-  paper: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1460-9568.2012.08060.x
-  subjects: 33
-  signals: EEG
-  neurorecording_system: "EEG 128-channel BioSemi"
-  minutes: 30
-  stimulus_type: audio
-  stimuli_description: "English fictional stories"
-  tasks: [attention_decoding, multi_speaker]
-  competing_talker_sex: "male-male"
-  talker_sex: ""
-  participant_population: "young, normal hearing"
-  authors: "A. J. Power, J. J. Foxe, E.-J. Forde, R. B. Reilly, and E. C. Lalor"
-  publication: "Power et al., Eur J Neurosci. 2012"
-  extras: "30 trials x 1 min, dichotic, used in O'Sullivan seminal paper"
+  extras: "60 trials × 50 s; HRTF-filtered; anechoic, mild, and high reverberation; EOG channels; single-talker trials also included."
 
 - name: RAVDESS
   link: https://zenodo.org/record/1188976
