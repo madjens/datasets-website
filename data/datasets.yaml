@@ -398,7 +398,7 @@
   link: https://zenodo.org/record/4470135
   paper: https://doi.org/10.1162/jocn_a_01811
   subjects: 17
-  signals: EEG (3-channel bipolar)
+  signals: EEG
   neurorecording_system: "EEG bipolar montage"
   minutes: 22
   stimulus_type: music
