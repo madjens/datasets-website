@@ -2,6 +2,56 @@
 # Columns: name, link, subjects, signals, neurorecording_system, minutes,
 #          stimulus_type, stimuli_description, tasks, competing_talker_sex,
 #          talker_sex, participant_population, authors, publication, extras
+- name: EEG Music-listening Experiment Dataset (AUTh)
+  link: https://github.com/AdamosDA/Music-EEG
+  paper: https://doi.org/10.1088/1741-2552/abffe6
+  subjects: 20
+  signals: EEG
+  neurorecording_system: "Emotiv EPOC+ (mobile EEG headset)"
+  minutes: 40
+  stimulus_type: music
+  stimuli_description: "Personalized playlists: 30 song excerpts per participant (80s each) rated as 'OK', 'like', or 'favorite'; playlist compiled in consultation with experimenter."
+  tasks: [music, enjoyment_rating, personalized_playlist]
+  competing_talker_sex: ""
+  talker_sex: "varied"
+  participant_population: "university students, young adults; 10 female, 6 without musical training"
+  authors: "S. Bakas, D. A. Adamos, N. Laskaris"
+  publication: "Bakas, S., Adamos, D. A., & Laskaris, N. (2021). On the estimate of Music Appraisal from surface EEG: a dynamic-network approach based on Cross-Sensor PAC measurements. Journal of Neural Engineering, 18(4), 046018. https://doi.org/10.1088/1741-2552/abffe6"
+  extras: "EEG resting-state data included (70s); song ratings collected before listening; 10 songs per rating category; preprocessed data (filtered 1–45 Hz, wavelet-ICA); 128 Hz sampling; sensor info included"
+
+- name: MUSIN-G (Music Listening–Genre EEG Dataset)
+  link: https://openneuro.org/datasets/ds003774/versions/1.0.2
+  paper: ""
+  subjects: 20
+  signals: EEG
+  neurorecording_system: "unspecified (OpenNeuro)"
+  minutes: 12
+  stimulus_type: music
+  stimuli_description: "12 songs per participant spanning genres from Indian Classical to Goth Rock; each session is a different song"
+  tasks: [music, enjoyment_rating, familiarity_rating]
+  competing_talker_sex: ""
+  talker_sex: "varied"
+  participant_population: "Indian adults"
+  authors: "K. P. Miyapuram, P. Pandey, N. Ahmad, B. R. Shiraguppi, E. Sharma, P. Lawhatre, D. Sonawane, D. Lomas"
+  publication: ""
+  extras: "Each trial: eyes closed for listening, then eyes open for rating familiarity and enjoyment (1=most familiar/enjoyable, 5=least); event timings in segmented data must be ignored; 1.0.2 is the correct, non-deprecated version"
+
+- name: Narratives fMRI
+  link: https://openneuro.org/datasets/ds002345
+  paper: https://www.nature.com/articles/s41597-021-01033-3
+  subjects: 345
+  signals: fMRI
+  neurorecording_system: "3T MRI (various Siemens and GE models)"
+  minutes: 300
+  stimulus_type: spoken_stories
+  stimuli_description: "Naturalistic spoken stories (27 unique stories; fiction and nonfiction; total ~4.6 hours; ~43,000 words; professionally narrated by male and female speakers)"
+  tasks: [story_listening, language_comprehension]
+  competing_talker_sex: ""
+  talker_sex: "male and female"
+  participant_population: "healthy adults, ages 18–55"
+  authors: "S. A. Nastase, Y.-F. Liu, H. Hillman, A. Zadbood, L. Hasenfratz, N. Keshavarzian, J. Chen, C. J. Honey, Y. Yeshurun, M. Regev, M. Nguyen, C. H. C. Chang, C. Baldassano, O. Lositsky, E. Simony, M. A. Chow, Y. C. Leong, P. P. Brooks, E. Micciche, G. Choe, A. Goldstein, T. Vanderwal, Y. O. Halchenko, K. A. Norman, U. Hasson"
+  publication: "Nastase et al., Scientific Data, 2021"
+  extras: "891 functional scans; BIDS-compliant; includes anatomical scans, time-stamped transcripts, rich metadata, and preprocessed data; widely used benchmark for naturalistic neuroimaging and language models."
 
 - name: ASA (Auditory Spatial Attention Dataset)
   link: https://zenodo.org/records/11541114
